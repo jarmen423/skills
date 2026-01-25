@@ -1,0 +1,1078 @@
+{
+  "version": 3,
+  "skills": {
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/remotion-dev/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T18:02:09.910Z",
+      "updatedAt": "2026-01-24T18:05:02.600Z"
+    },
+    "systematic-debugging": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T18:13:29.987Z",
+      "updatedAt": "2026-01-24T21:47:34.091Z"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T18:55:08.351Z",
+      "updatedAt": "2026-01-24T18:55:08.351Z"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T18:57:57.266Z",
+      "updatedAt": "2026-01-24T18:57:57.266Z"
+    },
+    "ralph-tui-create-beads": {
+      "source": "subsy/ralph-tui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/subsy/ralph-tui.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:07:43.556Z",
+      "updatedAt": "2026-01-24T19:07:43.556Z"
+    },
+    "ralph-tui-create-beads-rust": {
+      "source": "subsy/ralph-tui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/subsy/ralph-tui.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:07:43.574Z",
+      "updatedAt": "2026-01-24T19:07:43.574Z"
+    },
+    "ralph-tui-create-json": {
+      "source": "subsy/ralph-tui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/subsy/ralph-tui.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:07:43.592Z",
+      "updatedAt": "2026-01-24T19:07:43.592Z"
+    },
+    "ralph-tui-prd": {
+      "source": "subsy/ralph-tui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/subsy/ralph-tui.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:07:43.613Z",
+      "updatedAt": "2026-01-24T19:07:43.613Z"
+    },
+    "template-skill": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.470Z",
+      "updatedAt": "2026-01-24T19:09:59.470Z"
+    },
+    "algorithmic-art": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.504Z",
+      "updatedAt": "2026-01-24T21:47:32.088Z"
+    },
+    "canvas-design": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.532Z",
+      "updatedAt": "2026-01-24T21:47:32.599Z"
+    },
+    "brand-guidelines": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.562Z",
+      "updatedAt": "2026-01-24T19:09:59.562Z"
+    },
+    "frontend-design": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.603Z",
+      "updatedAt": "2026-01-24T21:47:33.057Z"
+    },
+    "mcp-builder": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.636Z",
+      "updatedAt": "2026-01-24T19:09:59.636Z"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.689Z",
+      "updatedAt": "2026-01-24T19:09:59.689Z"
+    },
+    "slack-gif-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.745Z",
+      "updatedAt": "2026-01-24T19:09:59.745Z"
+    },
+    "web-artifacts-builder": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.775Z",
+      "updatedAt": "2026-01-24T19:09:59.775Z"
+    },
+    "theme-factory": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.807Z",
+      "updatedAt": "2026-01-24T19:09:59.807Z"
+    },
+    "webapp-testing": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.850Z",
+      "updatedAt": "2026-01-24T21:47:34.389Z"
+    },
+    "xlsx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:09:59.880Z",
+      "updatedAt": "2026-01-24T19:09:59.880Z"
+    },
+    "supabase-postgres-best-practices": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/supabase/agent-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:42:50.894Z",
+      "updatedAt": "2026-01-24T19:42:50.894Z"
+    },
+    "session-handoff": {
+      "source": "softaworks/agent-toolkit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/softaworks/agent-toolkit.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:47:10.363Z",
+      "updatedAt": "2026-01-24T19:47:10.363Z"
+    },
+    "social-content": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:48:19.067Z",
+      "updatedAt": "2026-01-24T19:53:39.160Z"
+    },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:49:46.572Z",
+      "updatedAt": "2026-01-24T19:53:39.286Z"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:50:17.639Z",
+      "updatedAt": "2026-01-24T19:53:39.103Z"
+    },
+    "analytics-tracking": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.694Z",
+      "updatedAt": "2026-01-24T21:47:32.131Z"
+    },
+    "email-sequence": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.722Z",
+      "updatedAt": "2026-01-24T19:53:38.722Z"
+    },
+    "form-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.745Z",
+      "updatedAt": "2026-01-24T19:53:38.745Z"
+    },
+    "free-tool-strategy": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.772Z",
+      "updatedAt": "2026-01-24T21:47:33.032Z"
+    },
+    "launch-strategy": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.799Z",
+      "updatedAt": "2026-01-24T21:47:33.293Z"
+    },
+    "marketing-ideas": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.831Z",
+      "updatedAt": "2026-01-24T19:53:38.831Z"
+    },
+    "marketing-psychology": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.862Z",
+      "updatedAt": "2026-01-24T19:53:38.862Z"
+    },
+    "onboarding-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.883Z",
+      "updatedAt": "2026-01-24T19:53:38.883Z"
+    },
+    "page-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.907Z",
+      "updatedAt": "2026-01-24T19:53:38.907Z"
+    },
+    "paid-ads": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.936Z",
+      "updatedAt": "2026-01-24T19:53:38.936Z"
+    },
+    "paywall-upgrade-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.961Z",
+      "updatedAt": "2026-01-24T19:53:38.961Z"
+    },
+    "popup-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:38.984Z",
+      "updatedAt": "2026-01-24T19:53:38.984Z"
+    },
+    "pricing-strategy": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.002Z",
+      "updatedAt": "2026-01-24T19:53:39.002Z"
+    },
+    "programmatic-seo": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.033Z",
+      "updatedAt": "2026-01-24T21:47:33.599Z"
+    },
+    "referral-program": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.059Z",
+      "updatedAt": "2026-01-24T21:47:33.828Z"
+    },
+    "schema-markup": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.085Z",
+      "updatedAt": "2026-01-24T19:53:39.085Z"
+    },
+    "signup-flow-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.134Z",
+      "updatedAt": "2026-01-24T19:53:39.134Z"
+    },
+    "ab-test-setup": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.191Z",
+      "updatedAt": "2026-01-24T19:53:39.191Z"
+    },
+    "competitor-alternatives": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.226Z",
+      "updatedAt": "2026-01-24T21:47:32.755Z"
+    },
+    "copy-editing": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:53:39.255Z",
+      "updatedAt": "2026-01-24T19:53:39.255Z"
+    },
+    "email-best-practices": {
+      "source": "resend/email-best-practices",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/resend/email-best-practices.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:56:57.082Z",
+      "updatedAt": "2026-01-24T19:56:57.082Z"
+    },
+    "send-email": {
+      "source": "resend/resend-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/resend/resend-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:57:28.284Z",
+      "updatedAt": "2026-01-24T19:57:28.284Z"
+    },
+    "react-email": {
+      "source": "resend/react-email",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/resend/react-email.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T19:58:28.153Z",
+      "updatedAt": "2026-01-24T19:58:28.153Z"
+    },
+    "3d-web-experience": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:31.757Z",
+      "updatedAt": "2026-01-24T21:47:31.757Z"
+    },
+    "agent-evaluation": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:31.789Z",
+      "updatedAt": "2026-01-24T21:47:31.789Z"
+    },
+    "agent-manager-skill": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:31.825Z",
+      "updatedAt": "2026-01-24T21:47:31.825Z"
+    },
+    "agent-tool-builder": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:31.861Z",
+      "updatedAt": "2026-01-24T21:47:31.861Z"
+    },
+    "agent-memory-systems": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:31.883Z",
+      "updatedAt": "2026-01-24T21:47:31.883Z"
+    },
+    "ai-agents-architect": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:31.918Z",
+      "updatedAt": "2026-01-24T21:47:31.918Z"
+    },
+    "ai-product": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.022Z",
+      "updatedAt": "2026-01-24T21:47:32.022Z"
+    },
+    "ai-wrapper-product": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.053Z",
+      "updatedAt": "2026-01-24T21:47:32.053Z"
+    },
+    "api-documentation-generator": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.176Z",
+      "updatedAt": "2026-01-24T21:47:32.176Z"
+    },
+    "app-builder": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.213Z",
+      "updatedAt": "2026-01-24T21:47:32.213Z"
+    },
+    "app-store-optimization": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.258Z",
+      "updatedAt": "2026-01-24T21:47:32.258Z"
+    },
+    "architecture": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.282Z",
+      "updatedAt": "2026-01-24T21:47:32.282Z"
+    },
+    "autonomous-agent-patterns": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.315Z",
+      "updatedAt": "2026-01-24T21:47:32.315Z"
+    },
+    "autonomous-agents": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.349Z",
+      "updatedAt": "2026-01-24T21:47:32.349Z"
+    },
+    "aws-serverless": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.388Z",
+      "updatedAt": "2026-01-24T21:47:32.388Z"
+    },
+    "backend-dev-guidelines": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.418Z",
+      "updatedAt": "2026-01-24T21:47:32.418Z"
+    },
+    "bash-linux": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.452Z",
+      "updatedAt": "2026-01-24T21:47:32.452Z"
+    },
+    "blockrun": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.477Z",
+      "updatedAt": "2026-01-24T21:47:32.477Z"
+    },
+    "browser-automation": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.509Z",
+      "updatedAt": "2026-01-24T21:47:32.509Z"
+    },
+    "browser-extension-builder": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.534Z",
+      "updatedAt": "2026-01-24T21:47:32.534Z"
+    },
+    "bun-development": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.558Z",
+      "updatedAt": "2026-01-24T21:47:32.558Z"
+    },
+    "Burp Suite Web Application Testing": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.576Z",
+      "updatedAt": "2026-01-24T21:47:32.576Z"
+    },
+    "backend-patterns": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.627Z",
+      "updatedAt": "2026-01-24T21:47:32.627Z"
+    },
+    "d3-viz": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.659Z",
+      "updatedAt": "2026-01-24T21:47:32.659Z"
+    },
+    "clean-code": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.685Z",
+      "updatedAt": "2026-01-24T21:47:32.685Z"
+    },
+    "code-review-checklist": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.715Z",
+      "updatedAt": "2026-01-24T21:47:32.715Z"
+    },
+    "computer-use-agents": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.781Z",
+      "updatedAt": "2026-01-24T21:47:32.781Z"
+    },
+    "content-creator": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.809Z",
+      "updatedAt": "2026-01-24T21:47:32.809Z"
+    },
+    "concise-planning": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.832Z",
+      "updatedAt": "2026-01-24T21:47:32.832Z"
+    },
+    "context-window-management": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.858Z",
+      "updatedAt": "2026-01-24T21:47:32.858Z"
+    },
+    "core-components": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.886Z",
+      "updatedAt": "2026-01-24T21:47:32.886Z"
+    },
+    "database-design": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.922Z",
+      "updatedAt": "2026-01-24T21:47:32.922Z"
+    },
+    "discord-bot-architect": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.957Z",
+      "updatedAt": "2026-01-24T21:47:32.957Z"
+    },
+    "dispatching-parallel-agents": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:32.984Z",
+      "updatedAt": "2026-01-24T21:47:32.984Z"
+    },
+    "docker-expert": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.009Z",
+      "updatedAt": "2026-01-24T21:47:33.009Z"
+    },
+    "geo-fundamentals": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.082Z",
+      "updatedAt": "2026-01-24T21:47:33.082Z"
+    },
+    "inngest": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.107Z",
+      "updatedAt": "2026-01-24T21:47:33.107Z"
+    },
+    "interactive-portfolio": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.140Z",
+      "updatedAt": "2026-01-24T21:47:33.140Z"
+    },
+    "javascript-mastery": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.176Z",
+      "updatedAt": "2026-01-24T21:47:33.176Z"
+    },
+    "langfuse": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.221Z",
+      "updatedAt": "2026-01-24T21:47:33.221Z"
+    },
+    "langgraph": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.260Z",
+      "updatedAt": "2026-01-24T21:47:33.260Z"
+    },
+    "Linux Production Shell Scripts": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.325Z",
+      "updatedAt": "2026-01-24T21:47:33.325Z"
+    },
+    "llm-app-patterns": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.355Z",
+      "updatedAt": "2026-01-24T21:47:33.355Z"
+    },
+    "micro-saas-launcher": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.380Z",
+      "updatedAt": "2026-01-24T21:47:33.380Z"
+    },
+    "mobile-design": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.405Z",
+      "updatedAt": "2026-01-24T21:47:33.405Z"
+    },
+    "notebooklm": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.441Z",
+      "updatedAt": "2026-01-24T21:47:33.441Z"
+    },
+    "notion-template-business": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.464Z",
+      "updatedAt": "2026-01-24T21:47:33.464Z"
+    },
+    "parallel-agents": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.489Z",
+      "updatedAt": "2026-01-24T21:47:33.489Z"
+    },
+    "powershell-windows": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.512Z",
+      "updatedAt": "2026-01-24T21:47:33.512Z"
+    },
+    "product-manager-toolkit": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.537Z",
+      "updatedAt": "2026-01-24T21:47:33.537Z"
+    },
+    "production-code-audit": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.570Z",
+      "updatedAt": "2026-01-24T21:47:33.570Z"
+    },
+    "prompt-caching": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.624Z",
+      "updatedAt": "2026-01-24T21:47:33.624Z"
+    },
+    "prompt-engineer": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.658Z",
+      "updatedAt": "2026-01-24T21:47:33.658Z"
+    },
+    "prompt-engineering": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.681Z",
+      "updatedAt": "2026-01-24T21:47:33.681Z"
+    },
+    "prompt-library": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.708Z",
+      "updatedAt": "2026-01-24T21:47:33.708Z"
+    },
+    "python-patterns": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.731Z",
+      "updatedAt": "2026-01-24T21:47:33.731Z"
+    },
+    "rag-engineer": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.750Z",
+      "updatedAt": "2026-01-24T21:47:33.750Z"
+    },
+    "rag-implementation": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.779Z",
+      "updatedAt": "2026-01-24T21:47:33.779Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.803Z",
+      "updatedAt": "2026-01-24T21:47:33.803Z"
+    },
+    "research-engineer": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.858Z",
+      "updatedAt": "2026-01-24T21:47:33.858Z"
+    },
+    "scroll-experience": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.888Z",
+      "updatedAt": "2026-01-24T21:47:33.888Z"
+    },
+    "senior-architect": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.919Z",
+      "updatedAt": "2026-01-24T21:47:33.919Z"
+    },
+    "senior-fullstack": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.951Z",
+      "updatedAt": "2026-01-24T21:47:33.951Z"
+    },
+    "Shodan Reconnaissance and Pentesting": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:33.982Z",
+      "updatedAt": "2026-01-24T21:47:33.982Z"
+    },
+    "skill-developer": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.013Z",
+      "updatedAt": "2026-01-24T21:47:34.013Z"
+    },
+    "stripe-integration": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.033Z",
+      "updatedAt": "2026-01-24T21:47:34.033Z"
+    },
+    "subagent-driven-development": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.067Z",
+      "updatedAt": "2026-01-24T21:47:34.067Z"
+    },
+    "tailwind-patterns": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.120Z",
+      "updatedAt": "2026-01-24T21:47:34.120Z"
+    },
+    "twilio-communications": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.147Z",
+      "updatedAt": "2026-01-24T21:47:34.147Z"
+    },
+    "trigger-dev": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.170Z",
+      "updatedAt": "2026-01-24T21:47:34.170Z"
+    },
+    "typescript-expert": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.188Z",
+      "updatedAt": "2026-01-24T21:47:34.188Z"
+    },
+    "vercel-deployment": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.208Z",
+      "updatedAt": "2026-01-24T21:47:34.208Z"
+    },
+    "verification-before-completion": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.233Z",
+      "updatedAt": "2026-01-24T21:47:34.233Z"
+    },
+    "viral-generator-builder": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.262Z",
+      "updatedAt": "2026-01-24T21:47:34.262Z"
+    },
+    "voice-agents": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.298Z",
+      "updatedAt": "2026-01-24T21:47:34.298Z"
+    },
+    "voice-ai-development": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.329Z",
+      "updatedAt": "2026-01-24T21:47:34.329Z"
+    },
+    "web-performance-optimization": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.360Z",
+      "updatedAt": "2026-01-24T21:47:34.360Z"
+    },
+    "workflow-automation": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.427Z",
+      "updatedAt": "2026-01-24T21:47:34.427Z"
+    },
+    "writing-skills": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/sickn33/antigravity-awesome-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:47:34.453Z",
+      "updatedAt": "2026-01-24T21:47:34.453Z"
+    },
+    "context7": {
+      "source": "intellectronica/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/intellectronica/agent-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:51:04.003Z",
+      "updatedAt": "2026-01-25T03:31:48.162Z"
+    },
+    "prometheus-configuration": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:54:26.971Z",
+      "updatedAt": "2026-01-24T21:54:26.971Z"
+    },
+    "binary-analysis-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:55:56.286Z",
+      "updatedAt": "2026-01-24T21:55:56.286Z"
+    },
+    "rust-async-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:56:12.333Z",
+      "updatedAt": "2026-01-24T21:56:12.333Z"
+    },
+    "rust-engineer": {
+      "source": "jeffallan/claude-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/jeffallan/claude-skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-24T21:57:48.210Z",
+      "updatedAt": "2026-01-24T21:57:48.210Z"
+    },
+    "qwen3-tts": {
+      "source": "jarmen423/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/jarmen423/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-25T04:38:50.560Z",
+      "updatedAt": "2026-01-25T04:38:50.560Z"
+    },
+    "runpod-serverless": {
+      "source": "jarmen423/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/jarmen423/skills.git",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-25T04:40:30.125Z",
+      "updatedAt": "2026-01-25T04:40:30.125Z"
+    }
+  }
+}
