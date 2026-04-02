@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm \"ab-test-setup\")",
+      "Bash(cmd.exe /c 'mklink /J \"\"C:\\\\Users\\\\jfrie\\\\.claude\\\\skills\\\\ab-test-setup\"\" \"\"C:\\\\Users\\\\jfrie\\\\.agents\\\\skills\\\\ab-test-setup\"\"')",
+      "Bash(powershell.exe -Command \"New-Item -ItemType Junction -Path 'C:\\\\Users\\\\jfrie\\\\.claude\\\\skills\\\\ab-test-setup' -Target 'C:\\\\Users\\\\jfrie\\\\.agents\\\\skills\\\\ab-test-setup'\" 2>&1)",
+      "Bash(powershell.exe -File \"D:\\\\code\\\\skills\\\\myskills\\\\fix-skills-symlinks.ps1\")",
+      "WebFetch(domain:support.claude.com)"
+    ]
+  }
+}
