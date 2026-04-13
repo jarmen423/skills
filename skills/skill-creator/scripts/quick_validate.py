@@ -18,8 +18,9 @@ def validate_skill(skill_path):
     if not skill_md.exists():
         return False, "SKILL.md not found"
 
-    # Read and validate frontmatter
-    content = skill_md.read_text()
+    # Read and validate frontmatter (UTF-8: skills use Unicode punctuation; Windows
+    # default locale encoding is not UTF-8)
+    content = skill_md.read_text(encoding="utf-8")
     if not content.startswith('---'):
         return False, "No YAML frontmatter found"
 
