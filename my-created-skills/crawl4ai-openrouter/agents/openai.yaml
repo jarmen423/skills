@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crawl4AI + OpenRouter"
+  short_description: "Crawl pages and extract structured data with Crawl4AI"
+  default_prompt: "Use $crawl4ai-openrouter to crawl this page and extract structured JSON."
