@@ -146,6 +146,40 @@ For most phases in any project:
 
 Do not skip the contract-lock step for phases that widen shared types, schemas, or interface boundaries.
 
+## Orchestrator Read-Only Mode (Optional)
+
+Enable this mode when the orchestrating agent should act purely as a coordinator and never touch code or artifacts directly.
+
+### When to use
+
+- Large waves where the orchestrator managing work is a different concern from doing work
+- Projects where all edits must be traceable to a specific worker subagent
+- Any context where you want a clean audit trail of who changed what
+
+### Rules when active
+
+**No direct edits.** The orchestrator must not write, edit, or delete any project file. All changes are delegated to worker subagents with explicit owned paths.
+
+**No direct reviews.** The orchestrator must not perform code review itself. Reviews are delegated to review subagents. The orchestrator reads only the summary report those review subagents produce.
+
+**Verification exception.** Before delegating to a corrective subagent, the orchestrator is allowed to read files to confirm that a regression or error reported in a review actually exists. This is a read-only check — it does not authorize edits.
+
+### Delegation flow
+
+```
+Orchestrator
+  └─ spawns worker subagents (edits)
+  └─ spawns review subagents (reviews)
+       └─ review subagent writes summary report
+  └─ orchestrator reads report
+  └─ orchestrator optionally reads code to verify reported issue exists
+  └─ orchestrator spawns corrective subagent (edits)
+```
+
+### Handoff implication
+
+Review subagents must write their own handoff or summary report (e.g., `.planning/execution/handoffs/<wave-id>/review-<task-id>.md`). The orchestrator uses that file as its sole input for deciding whether to dispatch corrections.
+
 ## Common Failure Modes
 
 - launching parallel work before the contract is stable
