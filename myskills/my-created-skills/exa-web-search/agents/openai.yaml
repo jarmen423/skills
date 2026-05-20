@@ -1,4 +1,0 @@
-interface:
-  display_name: "Exa Web Search"
-  short_description: "Configure and use Exa for real-time web search"
-  default_prompt: "Use $exa-web-search to set up Exa MCP or Exa search tooling for Codex, Python coding agents, cURL, JavaScript, or OpenAI-compatible clients."

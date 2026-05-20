@@ -1,4 +1,0 @@
-interface:
-  display_name: "Healthcare Experiment Planning"
-  short_description: "Plan rigorous memory-native healthcare experiments"
-  default_prompt: "Use $healthcare-experiment-planning to design or critique a healthcare experiment plan grounded in institutional problems, fair baselines, and publishable methodology."

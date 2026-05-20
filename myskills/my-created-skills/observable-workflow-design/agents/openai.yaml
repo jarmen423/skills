@@ -1,4 +1,0 @@
-interface:
-  display_name: "Observable Workflow Design"
-  short_description: "Make workflows diagnosable by design"
-  default_prompt: "Use $observable-workflow-design to turn this multi-step workflow into a debuggable state machine before we patch it."

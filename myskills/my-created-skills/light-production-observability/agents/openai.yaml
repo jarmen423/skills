@@ -1,4 +1,0 @@
-interface:
-  display_name: "Light Production Observability"
-  short_description: "Lightweight observability checklist"
-  default_prompt: "Use $light-production-observability for a concise observability checklist before we implement or debug this path."
