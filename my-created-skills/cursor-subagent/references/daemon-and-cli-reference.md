@@ -9,6 +9,15 @@ cursor-subagent bus status --json
 cursor-subagent daemon status --json
 ```
 
+Linux notes:
+
+- `bus start` launches detached `nats-server` and `subagent-gateway` processes.
+- `daemon start` launches a detached REST daemon.
+- Start or restart the daemon after the bus is running when `watch` matters,
+  because the daemon creates its NATS publisher at startup.
+- If root disk is full, SQLite WAL mode may raise `sqlite3.OperationalError:
+  disk I/O error`; free `/` space or move rebuildable caches to `/data`.
+
 ## Session commands
 
 | Command | Description |
@@ -66,3 +75,14 @@ cursor-subagent daemon status --json
 | POST/GET | `/waves`, `/waves/{id}`, `/waves/{id}/spawn`, `/waves/{id}/close` |
 
 Streaming moved off FastAPI WebSocket — use gateway instead.
+
+## Operational rules
+
+- Always pass an absolute `--cwd`; repo-local `.env` lookup and recovery both
+  depend on the stored cwd.
+- Reuse the same `sessionId` with `send`; do not spawn a fresh session for each
+  follow-up.
+- Use `send --watch --json` when the orchestrator should both send feedback and
+  stream the resulting run.
+- Use `--persist` when event replay or templates must survive `close`.
+- Close sessions and waves when finished so live Cursor handles are released.
