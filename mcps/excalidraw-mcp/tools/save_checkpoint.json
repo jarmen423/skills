@@ -1,0 +1,20 @@
+{
+  "name": "save_checkpoint",
+  "description": "Update checkpoint with user-edited state.",
+  "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "data": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "data"
+    ]
+  }
+}

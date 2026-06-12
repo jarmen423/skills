@@ -1,0 +1,24 @@
+{
+  "name": "search_docs",
+  "description": "Search the official Gemini API and Google GenAI SDK documentation to find methods, parameters, and usage examples. Use this tool before writing code to discover the correct classes, method signatures, and patterns for the Google GenAI SDKs (Python: google-genai, TypeScript: @google/genai, Go, Java, Kotlin). Returns relevant documentation pages with code samples.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "A natural language search query describing what you want to learn about the Gemini API or Google GenAI SDKs. Be specific about the capability or method you need, e.g. \"how to generate text with gemini-2.5-flash\" or \"function calling with Google GenAI SDK\" rather than generic queries."
+      },
+      "detail": {
+        "type": "string",
+        "description": "The amount of detail to return.",
+        "enum": [
+          "default",
+          "verbose"
+        ]
+      }
+    },
+    "required": [
+      "query"
+    ]
+  }
+}

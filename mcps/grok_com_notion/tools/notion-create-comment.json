@@ -1,0 +1,422 @@
+{
+  "name": "notion-create-comment",
+  "description": "Add a comment to a page or specific content.\nCreates a new comment. Provide `page_id` to identify the page, then choose ONE targeting mode:\n- `page_id` alone: Page-level comment on the entire page\n- `page_id` + `selection_with_ellipsis`: Comment on specific block content\n- `discussion_id`: Reply to an existing discussion thread (page_id is still required)\n\nProvide exactly one content format:\n- `markdown`: Preferred. Inline Notion-flavored Markdown for comment text. For exact syntax, read the MCP resource `notion://docs/enhanced-markdown-spec` through your MCP client's resource-reading interface. Do NOT pass this URI to the Notion `fetch` tool or any URL-fetching tool. Use only the Rich text types and Mentions syntax that comments support. Comments support inline formatting (bold, italic, strikethrough, underline, code, links), inline math using `$`Equation`$`, and user/page/database/date mention tags such as `<mention-date start=\"YYYY-MM-DD\"/>`. Do not use UI shortcuts like `@today`, `@name`, `[[page]]`, or autocomplete-style emoji syntax; those are editor affordances, not markdown syntax. Mention tags must include a real `url` where required by the spec. Block-level Markdown such as headings, lists, tables, blockquotes, and fenced code blocks is stored as plain comment text rather than rendered as blocks.\n- `rich_text`: Array of rich text objects.\n\nFor content targeting, use `selection_with_ellipsis` with ~10 chars from start and end: \"# Section Ti...tle content\"\n<example description=\"Page-level comment\">\n{\"page_id\": \"uuid\", \"markdown\": \"Comment with **important** context.\"}\n</example>\n<example description=\"Comment on specific content\">\n{\"page_id\": \"uuid\", \"selection_with_ellipsis\": \"# Meeting No...es heading\",\n \"markdown\": \"Comment on this section.\"}\n</example>\n<example description=\"Reply to discussion\">\n{\"page_id\": \"uuid\", \"discussion_id\": \"discussion://pageId/blockId/discussionId\",\n \"markdown\": \"Reply with [context](https://example.com).\"}\n</example>",
+  "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "page_id": {
+        "type": "string",
+        "description": "The ID of the page to comment on (with or without dashes)."
+      },
+      "discussion_id": {
+        "description": "The ID or URL of an existing discussion to reply to (e.g., discussion://pageId/blockId/discussionId).",
+        "type": "string"
+      },
+      "selection_with_ellipsis": {
+        "description": "Unique start and end snippet of the content to comment on. DO NOT provide the entire string. Instead, provide up to the first ~10 characters, an ellipsis, and then up to the last ~10 characters. Make sure you provide enough of the start and end snippet to uniquely identify the content. For example: \"# Section heading...last paragraph.\"",
+        "type": "string"
+      },
+      "rich_text": {
+        "description": "An array of rich text objects that represent the content of the comment. Provide exactly one of rich_text or markdown.",
+        "maxItems": 100,
+        "type": "array",
+        "items": {
+          "allOf": [
+            {
+              "type": "object",
+              "properties": {
+                "annotations": {
+                  "description": "All rich text objects contain an annotations object that sets the styling for the rich text.",
+                  "type": "object",
+                  "properties": {
+                    "bold": {
+                      "type": "boolean"
+                    },
+                    "italic": {
+                      "type": "boolean"
+                    },
+                    "strikethrough": {
+                      "type": "boolean"
+                    },
+                    "underline": {
+                      "type": "boolean"
+                    },
+                    "code": {
+                      "type": "boolean"
+                    },
+                    "color": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": {}
+                }
+              },
+              "additionalProperties": {}
+            },
+            {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "text"
+                      ]
+                    },
+                    "text": {
+                      "type": "object",
+                      "properties": {
+                        "content": {
+                          "type": "string",
+                          "maxLength": 2000,
+                          "description": "The actual text content of the text."
+                        },
+                        "link": {
+                          "description": "An object with information about any inline link in this text, if included.",
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "url": {
+                                  "type": "string",
+                                  "description": "The URL of the link."
+                                }
+                              },
+                              "required": [
+                                "url"
+                              ],
+                              "additionalProperties": {}
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "content"
+                      ],
+                      "additionalProperties": false,
+                      "description": "If a rich text object's type value is `text`, then the corresponding text field contains an object including the text content and any inline link."
+                    }
+                  },
+                  "required": [
+                    "text"
+                  ],
+                  "additionalProperties": {}
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "mention"
+                      ]
+                    },
+                    "mention": {
+                      "anyOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "user"
+                              ]
+                            },
+                            "user": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "The ID of the user."
+                                },
+                                "object": {
+                                  "type": "string",
+                                  "enum": [
+                                    "user"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "id"
+                              ],
+                              "additionalProperties": {},
+                              "description": "Details of the user mention."
+                            }
+                          },
+                          "required": [
+                            "user"
+                          ],
+                          "additionalProperties": {}
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "date"
+                              ]
+                            },
+                            "date": {
+                              "type": "object",
+                              "properties": {
+                                "start": {
+                                  "type": "string",
+                                  "format": "date",
+                                  "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$",
+                                  "description": "The start date of the date object."
+                                },
+                                "end": {
+                                  "description": "The end date of the date object, if any.",
+                                  "anyOf": [
+                                    {
+                                      "type": "string",
+                                      "format": "date",
+                                      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                },
+                                "time_zone": {
+                                  "description": "The time zone of the date object, if any. E.g. America/Los_Angeles, Europe/London, etc.",
+                                  "anyOf": [
+                                    {
+                                      "type": "string"
+                                    },
+                                    {
+                                      "type": "null"
+                                    }
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "start"
+                              ],
+                              "additionalProperties": false,
+                              "description": "Details of the date mention."
+                            }
+                          },
+                          "required": [
+                            "date"
+                          ],
+                          "additionalProperties": {}
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "page"
+                              ]
+                            },
+                            "page": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "The ID of the page in the mention."
+                                }
+                              },
+                              "required": [
+                                "id"
+                              ],
+                              "additionalProperties": {},
+                              "description": "Details of the page mention."
+                            }
+                          },
+                          "required": [
+                            "page"
+                          ],
+                          "additionalProperties": {}
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "database"
+                              ]
+                            },
+                            "database": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "The ID of the database in the mention."
+                                }
+                              },
+                              "required": [
+                                "id"
+                              ],
+                              "additionalProperties": {},
+                              "description": "Details of the database mention."
+                            }
+                          },
+                          "required": [
+                            "database"
+                          ],
+                          "additionalProperties": {}
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "template_mention"
+                              ]
+                            },
+                            "template_mention": {
+                              "anyOf": [
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "template_mention_date"
+                                      ]
+                                    },
+                                    "template_mention_date": {
+                                      "type": "string",
+                                      "enum": [
+                                        "today",
+                                        "now"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "template_mention_date"
+                                  ],
+                                  "additionalProperties": false
+                                },
+                                {
+                                  "type": "object",
+                                  "properties": {
+                                    "type": {
+                                      "type": "string",
+                                      "enum": [
+                                        "template_mention_user"
+                                      ]
+                                    },
+                                    "template_mention_user": {
+                                      "type": "string",
+                                      "enum": [
+                                        "me"
+                                      ]
+                                    }
+                                  },
+                                  "required": [
+                                    "template_mention_user"
+                                  ],
+                                  "additionalProperties": false
+                                }
+                              ],
+                              "description": "Details of the template mention."
+                            }
+                          },
+                          "required": [
+                            "template_mention"
+                          ],
+                          "additionalProperties": {}
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "enum": [
+                                "custom_emoji"
+                              ]
+                            },
+                            "custom_emoji": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "The ID of the custom emoji."
+                                },
+                                "name": {
+                                  "description": "The name of the custom emoji.",
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "description": "The URL of the custom emoji.",
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "id"
+                              ],
+                              "additionalProperties": {},
+                              "description": "Details of the custom emoji mention."
+                            }
+                          },
+                          "required": [
+                            "custom_emoji"
+                          ],
+                          "additionalProperties": {}
+                        }
+                      ],
+                      "description": "Mention objects represent an inline mention of a database, date, link preview mention, page, template mention, or user. A mention is created in the Notion UI when a user types `@` followed by the name of the reference."
+                    }
+                  },
+                  "required": [
+                    "mention"
+                  ],
+                  "additionalProperties": {}
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "enum": [
+                        "equation"
+                      ]
+                    },
+                    "equation": {
+                      "type": "object",
+                      "properties": {
+                        "expression": {
+                          "type": "string",
+                          "description": "A KaTeX compatible string."
+                        }
+                      },
+                      "required": [
+                        "expression"
+                      ],
+                      "additionalProperties": {},
+                      "description": "Notion supports inline LaTeX equations as rich text objects with a type value of `equation`."
+                    }
+                  },
+                  "required": [
+                    "equation"
+                  ],
+                  "additionalProperties": {}
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "markdown": {
+        "description": "The content of the comment as a Markdown string. Provide exactly one of markdown or rich_text. For exact syntax, read the MCP resource notion://docs/enhanced-markdown-spec through your MCP client's resource-reading interface. Do not pass this URI to the Notion fetch tool or any URL-fetching tool, and use only the Rich text types and Mentions syntax that comments support. Comments support inline formatting (bold, italic, strikethrough, underline, code, links), inline math using $`Equation`$, and user/page/database/date mention tags such as <mention-date start=\"YYYY-MM-DD\"/>. Do not use UI shortcuts like @today, @name, [[page]], or autocomplete-style emoji syntax; those are editor affordances, not markdown syntax. Mention tags must include a real url where required by the spec. Block-level Markdown such as fenced code blocks, headings, lists, tables, and blockquotes is stored as plain comment text rather than rendered as blocks.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "page_id"
+    ],
+    "additionalProperties": {}
+  }
+}

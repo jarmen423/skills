@@ -1,0 +1,17 @@
+{
+  "name": "create_view",
+  "description": "Renders a hand-drawn diagram using Excalidraw elements.\nElements stream in one by one with draw-on animations.\nCall read_me first to learn the element format.",
+  "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "elements": {
+        "type": "string",
+        "description": "JSON array string of Excalidraw elements. Must be valid JSON — no comments, no trailing commas. Keep compact. Call read_me first for format reference."
+      }
+    },
+    "required": [
+      "elements"
+    ]
+  }
+}

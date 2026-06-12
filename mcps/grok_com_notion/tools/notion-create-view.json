@@ -1,0 +1,51 @@
+{
+  "name": "notion-create-view",
+  "description": "Create a new view on a Notion database.\nExactly one of \"database_id\" or \"parent_page_id\" must be provided:\n- \"database_id\": add a new view tab to an existing database.\n- \"parent_page_id\": create an inline linked database view on a page that references the existing \"data_source_id\" (like the UI \"/linked\" command). The linked view block is appended to the end of the parent page.\n\nUse \"fetch\" first to get the database_id, parent_page_id, and data_source_id (from <data-source> tags in the response). The caller must have edit access to the database (or parent page) and access to the data source.\nSupported types: table, board, list, calendar, timeline, gallery, form, chart, map, dashboard.\nThe optional \"configure\" param accepts a DSL for filters, sorts, grouping,\nand display options. See the notion://docs/view-dsl-spec resource for full\nsyntax. Key directives:\n- FILTER \"Property\" = \"value\" — filter rows\n- SORT BY \"Property\" ASC — sort rows\n- GROUP BY \"Property\" — group by property (required for board views)\n- CALENDAR BY \"Property\" — date property (required for calendar views)\n- TIMELINE BY \"Start\" TO \"End\" — date range (required for timeline views)\n- MAP BY \"Property\" — location property (required for map views)\n- CHART column|bar|line|donut|number — chart type with optional AGGREGATE, COLOR, HEIGHT, SORT, STACK BY, CAPTION\n- FORM CLOSE|OPEN — close/open form submissions\n- FORM ANONYMOUS true|false — toggle anonymous submissions\n- FORM PERMISSIONS none|reader|editor — set submission permissions\n- SHOW \"Prop1\", \"Prop2\" — set visible properties\n- COVER \"Property\" — cover image property\n\n<example description=\"Table view on existing database\">{\"database_id\": \"abc123\", \"data_source_id\": \"def456\", \"name\": \"All Tasks\", \"type\": \"table\"}</example>\n<example description=\"Board grouped by Status\">{\"database_id\": \"abc123\", \"data_source_id\": \"def456\", \"name\": \"Task Board\", \"type\": \"board\", \"configure\": \"GROUP BY \"Status\"\"}</example>\n<example description=\"Filtered + sorted table\">{\"database_id\": \"abc123\", \"data_source_id\": \"def456\", \"name\": \"Active\", \"type\": \"table\", \"configure\": \"FILTER \"Status\" = \"In Progress\"; SORT BY \"Due Date\" ASC\"}</example>\n<example description=\"Calendar view\">{\"database_id\": \"abc123\", \"data_source_id\": \"def456\", \"name\": \"Calendar\", \"type\": \"calendar\", \"configure\": \"CALENDAR BY \"Due Date\"\"}</example>\n<example description=\"Dashboard\">{\"database_id\": \"abc123\", \"data_source_id\": \"def456\", \"name\": \"Overview\", \"type\": \"dashboard\"}</example>\n<example description=\"Linked view on a page\">{\"parent_page_id\": \"ghi789\", \"data_source_id\": \"def456\", \"name\": \"Company tasks\", \"type\": \"table\", \"configure\": \"FILTER \"Company\" = \"Acme\"\"}</example>",
+  "inputSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "data_source_id": {
+        "type": "string",
+        "description": "The data source (collection) ID. Accepts a collection:// URI from <data-source> tags or a bare UUID."
+      },
+      "name": {
+        "type": "string",
+        "description": "The name of the view."
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "table",
+          "board",
+          "list",
+          "calendar",
+          "timeline",
+          "gallery",
+          "form",
+          "chart",
+          "map",
+          "dashboard"
+        ]
+      },
+      "database_id": {
+        "description": "The database to add a view tab to. Accepts a Notion URL or a bare UUID. Mutually exclusive with `parent_page_id`; exactly one must be provided.",
+        "type": "string"
+      },
+      "parent_page_id": {
+        "description": "A page to create an inline linked database view on. Accepts a Notion URL or a bare UUID. The new linked view block is appended at the end of the page and references `data_source_id`. Mutually exclusive with `database_id`; exactly one must be provided.",
+        "type": "string"
+      },
+      "configure": {
+        "description": "View configuration DSL string. Supports FILTER, SORT BY, GROUP BY, CALENDAR BY, TIMELINE BY, MAP BY, CHART, FORM, SHOW, HIDE, COVER, WRAP CELLS, and FREEZE COLUMNS directives. See notion://docs/view-dsl-spec.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "data_source_id",
+      "name",
+      "type"
+    ],
+    "additionalProperties": {}
+  }
+}

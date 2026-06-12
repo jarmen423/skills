@@ -1,0 +1,8 @@
+{
+  "name": "read_me",
+  "description": "Returns the Excalidraw element format reference with color palettes, examples, and tips. Call this BEFORE using create_view for the first time.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}
