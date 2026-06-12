@@ -62,11 +62,17 @@ Do **not** spawn a new session per message.
 ```bash
 cursor-subagent spawn --task "<precise task with owned paths>" --cwd /path/to/repo --json
 cursor-subagent send <sessionId> "<feedback>" --json
+cursor-subagent send <sessionId> "<feedback>" --watch --json
 cursor-subagent watch <sessionId>              # Rust gateway WebSocket
+cursor-subagent events <sessionId> --json      # SQLite replay
 cursor-subagent close <sessionId> --json
 ```
 
 Local runtime edits the live `--cwd` checkout via the cursor-sdk bridge.
+
+On Linux, start `bus` before `daemon` when live watch is needed. The daemon
+binds a NATS publisher during startup; if it started while NATS was down, run
+`cursor-subagent daemon stop && cursor-subagent daemon start`.
 
 ## Cloud agents
 
@@ -138,10 +144,13 @@ cursor-subagent wave close wave-1 --json
 ## Rules for main agents
 
 - One session per delegated task; reuse via `send`
-- Start `bus` before `watch`; REST auto-starts Python daemon
+- Start `bus` before `daemon`/`watch`; REST auto-starts Python daemon but cannot retroactively bind NATS if the daemon started while the bus was down
 - Always `close` sessions or `wave close` when finished
 - Never log `CURSOR_API_KEY`
 - v1 provider: `cursor-composer` only
 - On Windows, local runtime bridge bootstrap is automatic
+- Always pass an absolute `--cwd`; repo-local `.env` credentials and daemon recovery depend on it
+- Use `--persist` only when you need templates or durable event replay after close
+- If `/` is full, SQLite WAL and Python tooling can fail; use a cache path on `/data` for `uv run`
 
 See [`references/agent-md-snippet.md`](references/agent-md-snippet.md) for AGENTS.md copy-paste block.

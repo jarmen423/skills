@@ -9,6 +9,15 @@ cursor-subagent bus status --json
 cursor-subagent daemon status --json
 ```
 
+Linux notes:
+
+- `bus start` launches detached `nats-server` and `subagent-gateway` processes.
+- `daemon start` launches a detached REST daemon.
+- Start or restart the daemon after the bus is running when `watch` matters,
+  because the daemon creates its NATS publisher at startup.
+- If root disk is full, SQLite WAL mode may raise `sqlite3.OperationalError:
+  disk I/O error`; free `/` space or move rebuildable caches to `/data`.
+
 ## Credentials
 
 Loaded at spawn/resume time from `--cwd`:
@@ -19,7 +28,7 @@ Loaded at spawn/resume time from `--cwd`:
 | 2 | `<repo>/.env` (walk up from `--cwd` to `.git` root) |
 | 3 | `~/.cursor/subagents/.env` |
 
-Agents must pass `--cwd` to the repository under automation.
+Agents must pass an absolute `--cwd` to the repository under automation.
 
 ## Session commands
 
@@ -103,3 +112,14 @@ Requirements: `CURSOR_API_KEY`, paid Cursor plan, GitHub/GitLab connected with r
 Local runtime requires the `cursor-sdk` bridge. On Windows the provider pre-launches the bridge and sets `CURSOR_SDK_BRIDGE_URL` / `CURSOR_SDK_BRIDGE_TOKEN` (workaround for SDK `WinError 10038`).
 
 To attach to an existing bridge manually, export those variables before spawning.
+
+## Operational rules
+
+- Always pass an absolute `--cwd`; repo-local `.env` lookup and recovery both
+  depend on the stored cwd.
+- Reuse the same `sessionId` with `send`; do not spawn a fresh session for each
+  follow-up.
+- Use `send --watch --json` when the orchestrator should both send feedback and
+  stream the resulting run.
+- Use `--persist` when event replay or templates must survive `close`.
+- Close sessions and waves when finished so live Cursor handles are released.
