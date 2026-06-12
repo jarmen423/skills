@@ -109,6 +109,7 @@ You are ready to move to Phase 2 when you can confidently answer ALL of:
 -   [ ] How should errors be handled?
 -   [ ] Does the workflow need any code? (If yes → CLI pattern; if no →
     instruction-only)
+-   [ ] Where should the skill be installed? (local, global, or custom path)
 -   [ ] Is there a sample query/answer for validation?
 
 ## Phase 2: Skill Design
@@ -118,7 +119,8 @@ it to the user for approval. The document must include:
 
 1.  **Skill name and description** (following YAML frontmatter rules: name ≤64
     chars, lowercase + hyphens; description ≤1024 chars).
-2.  **Directory structure** showing all planned files.
+2.  **Directory structure** showing all planned files and the **install
+    location** (local, global, or custom — see Rule 7).
 3.  **Existing skills referenced** with rationale for each.
 4.  **New scripts** (if any) with proposed subcommands and arguments.
 5.  **Rate limiting strategy** for any APIs not covered by existing skills.
@@ -257,6 +259,23 @@ description: >-
 ## Common Mistakes
 {List 2-3 common pitfalls.}
 ```
+
+### Rule 7: Skill Placement
+
+Skills can be installed **locally** (project-specific, per-workspace) or
+**globally** (available across all projects). Ask the user if they want to
+install locally, globally, or use a custom install path.
+
+Skill paths by agent CLI (local paths relative to project root):
+
+-   **Claude Code**: local `.claude/skills/`, global `~/.claude/skills/`
+-   **Codex**: local `.agents/skills/`, global `~/.agents/skills/`
+-   **Antigravity 2.0**: local `.agents/skills/`, global
+    `~/.gemini/config/skills/`
+-   **Gemini CLI**: local `.gemini/skills/`, global `~/.gemini/skills/`
+-   **OpenCode**: local `.opencode/skills/`, global `~/.config/opencode/skills/`
+
+For other CLIs, find out local and global skill paths by yourself.
 
 ## Phase 4: Validation
 

@@ -21,10 +21,10 @@ This script fetches ontology property details, including hierarchy
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 import argparse

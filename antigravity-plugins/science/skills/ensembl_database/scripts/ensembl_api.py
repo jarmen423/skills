@@ -23,10 +23,10 @@ human-readable summary is printed to stdout.
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 import argparse
@@ -35,7 +35,7 @@ import os
 import sys
 import tempfile
 
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 BASE_URL = "https://rest.ensembl.org"
 GRCH37_URL = "https://grch37.rest.ensembl.org"

@@ -22,10 +22,10 @@ predictions, target druggability, and disease/target associations.
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 import argparse
@@ -34,7 +34,7 @@ import re
 import sys
 from typing import Any
 
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 BASE_URL = "https://api.platform.opentargets.org/api/v4/graphql"
 _CLIENT = http_client.HttpClient(BASE_URL, qps=1.0)

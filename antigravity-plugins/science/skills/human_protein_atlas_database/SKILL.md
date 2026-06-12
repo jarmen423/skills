@@ -161,6 +161,14 @@ uv run scripts/hpa_cli.py search-hpa \
 -   **Notification**: If this skill is used, ensure this is mentioned in the
     output.
 
+## API Versioning
+
+The HPA website at `www.proteinatlas.org` always serves the **latest** data
+release. Older archived versions can be accessed via `vNN.proteinatlas.org`
+(e.g., `v24.proteinatlas.org`), while the current version's subdomain redirects
+to `www.proteinatlas.org`. This skill's scripts query the latest version by
+default.
+
 ## Common Errors
 
 -   If no results are returned, confirm the query is detailed enough starting

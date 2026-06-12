@@ -22,10 +22,10 @@ retries on transient errors (HTTP 429, 503) with exponential backoff.
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ import sys
 from typing import Any
 import urllib.parse
 
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 BASE_URL = "https://www.ebi.ac.uk/chembl/api/data"
 _CLIENT = http_client.HttpClient(BASE_URL, qps=5.0)

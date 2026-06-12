@@ -21,11 +21,11 @@ required --output flag. Optionally saves raw JSON via -j/--json.
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 #   "python-dotenv",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 import argparse
@@ -37,7 +37,7 @@ import urllib.error
 import urllib.parse
 
 import dotenv
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 ALLOWED_DATABASES = [
     "uniprotkb",

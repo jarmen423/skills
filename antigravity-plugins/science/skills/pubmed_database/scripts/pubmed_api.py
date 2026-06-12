@@ -27,11 +27,11 @@ Usage:
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 #   "python-dotenv",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 import inspect
@@ -42,7 +42,7 @@ import urllib.parse
 import xml.etree.ElementTree as ET
 
 import dotenv
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 EUTILS_BASE = "https://eutils.ncbi.nlm.nih.gov"
 PMC_BIOC_BASE = (

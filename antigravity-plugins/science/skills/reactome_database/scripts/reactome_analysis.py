@@ -24,10 +24,10 @@ Content Service queries, diagram export, and cross-reference mapping.
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ import sys
 from typing import Any
 import urllib.parse
 
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 ANALYSIS_BASE_URL = "https://reactome.org/AnalysisService"
 CONTENT_BASE_URL = "https://reactome.org/ContentService"
@@ -929,7 +929,8 @@ def _dispatch(args: argparse.Namespace) -> None:
   accept = cfg.get("accept", "application/json")
   if handler == "binary" and accept == "application/json":
     ext = getattr(args, "format", "png") or "png"
-    accept = f"image/{ext}"
+    mime_map = {"svg": "image/svg+xml", "jpg": "image/jpeg"}
+    accept = mime_map.get(ext, f"image/{ext}")
   headers = {
       "Content-Type": content_type,
       "Accept": accept,

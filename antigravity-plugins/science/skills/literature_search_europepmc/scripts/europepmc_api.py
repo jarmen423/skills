@@ -22,10 +22,10 @@ Usage examples:
 # /// script
 # requires-python = ">=3.10"
 # dependencies = [
-#   "science-skills-common",
+#   "scienceskillscommon",
 # ]
 # [tool.uv.sources]
-# science-skills-common = { path = "../../science_skills_common" }
+# scienceskillscommon = { path = "../../scienceskillscommon" }
 # ///
 
 from __future__ import annotations
@@ -38,7 +38,7 @@ import sys
 import urllib.parse
 import xml.etree.ElementTree as ET
 
-from science_skills.science_skills_common import http_client
+from science_skills.skills.scienceskillscommon import http_client
 
 _API_BASE = "https://www.ebi.ac.uk/europepmc/webservices/rest/"
 _PDF_BASE = "https://europepmc.org/"
