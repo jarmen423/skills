@@ -61,6 +61,61 @@ Agents must pass an absolute `--cwd` to the repository under automation.
 | `wave status <waveId> [--json]` | Wave + sessions |
 | `wave close <waveId> [--json]` | Close all wave sessions |
 
+## Automation commands
+
+Project-local automations are stored in SQLite and run through the local daemon.
+Every trigger creates a fresh persisted session. Cross-run continuity comes from
+the automation memory summary and recent run history injected into each prompt.
+
+| Command | Description |
+| ------- | ----------- |
+| `automation create --name NAME --task TEXT --cwd DIR [--cron EXPR] [--webhook] [--json]` | Create a local cron and/or webhook automation |
+| `automation list [--status enabled\|paused] [--json]` | List automations |
+| `automation show <automationId> [--json]` | Show definition, webhook URL, schedule, and memory |
+| `automation trigger <automationId> [--payload JSON] [--json]` | Run immediately |
+| `automation runs <automationId> [--limit N] [--json]` | List run ledger rows |
+| `automation history <automationId> [--full] [--json]` | Show rolling memory, optionally full history |
+| `automation pause|resume <automationId> [--json]` | Disable or enable triggers |
+| `automation rotate-secret <automationId> [--json]` | Generate a new one-time webhook secret |
+| `automation delete <automationId> [--json]` | Delete definition and local run history |
+
+Webhook POSTs go to `/automations/{id}/webhook` with
+`Authorization: Bearer <secret>` and JSON body `{"payload": {...}}`.
+
+### Automation creation recipe
+
+When a user asks an agent to create an automation, use these patterns:
+
+```bash
+# Scheduled automation. Use an absolute --cwd and standard five-field cron.
+cursor-subagent automation create \
+  --name "Daily repo digest" \
+  --task "Summarize important repo changes. Read Automation History first and do not repeat completed work. End with an Automation Memory Update section." \
+  --cwd /path/to/repo \
+  --cron "0 9 * * *" \
+  --json
+
+# Webhook automation. The returned webhook_secret is shown only once.
+cursor-subagent automation create \
+  --name "Deploy review" \
+  --task "Review the webhook payload, inspect the repo as needed, identify follow-up work, and end with an Automation Memory Update section." \
+  --cwd /path/to/repo \
+  --webhook \
+  --json
+
+# Smoke run and history check.
+cursor-subagent automation trigger <automationId> --payload '{"reason":"smoke"}' --json
+cursor-subagent automation history <automationId> --full --json
+```
+
+Creation checklist for agents:
+
+- Start `bus` and `daemon` first if status commands show they are not running.
+- Report the automation id, schedule or webhook URL, next run time, and where to
+  inspect history.
+- Do not log `CURSOR_API_KEY`; avoid repeating webhook secrets after creation.
+- Use `rotate-secret` if a webhook secret is lost.
+
 ## NATS subjects
 
 | Subject | Publisher | Purpose |
@@ -85,6 +140,8 @@ Agents must pass an absolute `--cwd` to the repository under automation.
 | POST | `/sessions/{id}/messages`, `/sessions/{id}/cancel`, `/shutdown` |
 | DELETE | `/sessions/{id}` |
 | POST/GET | `/waves`, `/waves/{id}`, `/waves/{id}/spawn`, `/waves/{id}/close` |
+| POST/GET/PATCH/DELETE | `/automations`, `/automations/{id}` |
+| POST/GET | `/automations/{id}/trigger`, `/automations/{id}/webhook`, `/automations/{id}/runs`, `/automations/{id}/history` |
 
 Streaming moved off FastAPI WebSocket — use gateway instead.
 
@@ -123,3 +180,5 @@ To attach to an existing bridge manually, export those variables before spawning
   stream the resulting run.
 - Use `--persist` when event replay or templates must survive `close`.
 - Close sessions and waves when finished so live Cursor handles are released.
+- Automation cron schedules use daemon-local time and do not backfill downtime.
+- Set `SUBAGENT_DISABLE_AUTOMATION_SCHEDULER=1` only for tests or manual daemon debugging.
