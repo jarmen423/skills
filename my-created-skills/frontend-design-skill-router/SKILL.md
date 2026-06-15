@@ -1,3 +1,8 @@
+---
+name: frontend-design-skill-router
+description: A high-signal routing layer and knowledge base for AI agents building production UIs for Mobile Apps and SaaS/Web Apps. Use when designing or reviewing frontend interfaces where visual/emotional delight and high performance must coexist.
+---
+
 # Frontend Design Excellence Router
 
 > A high-signal routing layer and knowledge base for AI agents building production UIs for Mobile Apps and SaaS/Web Apps.
@@ -45,7 +50,7 @@ The goal is interfaces where the UI creates desire independent of (or in additio
 **Synthesis**  
 Lovable navigation is invisible architecture made visible. It shortens the path from intent to action, keeps users oriented with persistent landmarks, and uses motion only to explain relationships. Performance is part of IA: prefetch likely routes, preserve scroll position, use optimistic updates, and animate only compositor-friendly properties (`transform`/`opacity`). Hidden navigation and layout-triggering animations destroy both delight and speed.
 
-**Go to the dedicated content skill:** `navigation-wayfinding.skill.md`
+**Go to the dedicated content skill:** `navigation-wayfinding/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Linear performance engineering notes
@@ -69,7 +74,7 @@ Lovable navigation is invisible architecture made visible. It shortens the path 
 **Synthesis**  
 Great layout is invisible architecture. A disciplined spacing system and clear hierarchy let users feel smart because they can predict where things are, while the browser stays fast because the rules are declarative and compositor-friendly. Use CSS Grid, subgrid, container queries, and tokenized spacing before reaching for JavaScript measurement. Reserve space for images and media to avoid CLS. Animate only `transform` and `opacity`.
 
-**Go to the dedicated content skill:** `layout-composition.skill.md`
+**Go to the dedicated content skill:** `layout-composition/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Stripe Connect and accessible color system posts
@@ -93,7 +98,7 @@ Great layout is invisible architecture. A disciplined spacing system and clear h
 **Synthesis**  
 The durable rule is to render the decision, not the dataset. Use virtualization for long surfaces, skeleton or deferred rendering during scroll, and selective rendering technology (SVG vs Canvas vs WebGL) based on mark count and interactivity needs. Decouple interaction from rendering. If chart animation makes panning, hovering, or selecting feel sluggish, the animation lost the argument.
 
-**Go to the dedicated content skill:** `data-display-visualization.skill.md`
+**Go to the dedicated content skill:** `data-display-visualization/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Figma Layers Panel performance rebuild
@@ -116,7 +121,7 @@ The durable rule is to render the decision, not the dataset. Use virtualization 
 **Synthesis**  
 The most lovable forms are the ones users barely feel. Reduce fields, accept multiple sensible input formats, validate at meaningful checkpoints, preserve work, and use native/browser autofill aggressively. Turn empty states into first-success states with one obvious action. Onboarding should be short, skippable, contextual, and tied to real value — not mandatory tutorials.
 
-**Go to the dedicated content skill:** `forms-inputs-validation.skill.md`
+**Go to the dedicated content skill:** `forms-inputs-validation/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Stripe Checkout and Elements documentation
@@ -139,7 +144,7 @@ The most lovable forms are the ones users barely feel. Reduce fields, accept mul
 **Synthesis**  
 Use microinteractions to answer user questions instantly: "Did it register?", "What changed?", "Where did that go?". Prefer skeletons when layout is known, determinate progress when time can be estimated, and local spinners for short indeterminate actions. Keep motion brief, context-reinforcing, and strictly on compositor-friendly properties. Replace nonessential motion when the user requests reduced motion or the page is already heavy.
 
-**Go to the dedicated content skill:** `microinteractions-loading-transitions.skill.md`
+**Go to the dedicated content skill:** `microinteractions-loading-transitions/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Apple HIG motion guidance
@@ -162,7 +167,7 @@ Use microinteractions to answer user questions instantly: "Did it register?", "W
 **Synthesis**  
 Use CSS, SVG, Motion, and View Transitions for most UI state changes and "premium feel" work. Reach for Canvas when you need many simple moving marks. Use WebGL/Three.js only when real 3D perspective, lighting, or immersive storytelling is central to understanding the product. When you do, progressively enhance: gate on capability signals, ship a poster or 2D fallback, cap DPR, reuse geometry/textures, and render on demand (`frameloop="demand"`). The decision ladder and asset pipeline matter more than the rendering engine.
 
-**Go to the dedicated content skill:** `high-end-visuals-3d-webgl.skill.md`
+**Go to the dedicated content skill:** `high-end-visuals-3d-webgl/SKILL.md`
 
 **Further reading & authoritative sources**  
 - React Three Fiber performance docs (`frameloop="demand"`, instancing, LOD)
@@ -185,7 +190,7 @@ Use CSS, SVG, Motion, and View Transitions for most UI state changes and "premiu
 **Synthesis**  
 Coherent theming creates emotional ownership. Build on semantic tokens and CSS variables so theme changes are instant and cheap. Eliminate FOUC with a blocking script in `<head>` that reads preference and applies the class before hydration. Treat personalized assets as performance assets (optimize, lazy-load, reserve space). Keep heavy effects gated behind capability detection.
 
-**Go to the dedicated content skill:** `theming-personalization.skill.md`
+**Go to the dedicated content skill:** `theming-personalization/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Stripe accessible color system work
@@ -208,7 +213,7 @@ Coherent theming creates emotional ownership. Build on semantic tokens and CSS v
 **Synthesis**  
 True performance architecture treats network latency as a product defect. Use local-first patterns: hydrate from IndexedDB into observable state, apply optimistic updates immediately, and treat the server as background confirmation. On the rendering layer, use Server Components, streaming, selective hydration, and islands. Keep animation on compositor-friendly properties. Measure real-user CWV + conversion, not just Lighthouse scores. Capability detection and reduced-motion support are non-negotiable.
 
-**Go to the dedicated content skill:** `performance-architecture.skill.md`
+**Go to the dedicated content skill:** `performance-architecture/SKILL.md`
 
 **Further reading & authoritative sources**  
 - Linear Sync Engine engineering notes
