@@ -53,7 +53,7 @@ Each packet should include:
 
 ## Splitting rule
 
-Prefer many precise packets over a few broad PRs when broad PRs hide product decisions. Packets do not have to become separate merged PRs: adjacent tiny packets can be grouped after semantics are nailed down.
+Prefer many precise packets over a few broad PRs when broad PRs hide product decisions. Here, “PR” may mean a trusted implementation unit, not necessarily a final merged GitHub PR. Packets do not have to become separate merged PRs: after concepts and technical methods are clarified, adjacent packets can be grouped if cognitive load is low and the remaining work is mostly mechanical/stamina rather than judgment.
 
 Split whenever a packet mixes distinct risk types:
 

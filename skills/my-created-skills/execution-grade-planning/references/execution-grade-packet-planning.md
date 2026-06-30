@@ -60,7 +60,7 @@ Start splitting into more packets when two or more of these appear:
 
 ## Packet vs PR
 
-Plan as many packets as needed to remove ambiguity. Do not assume each packet must be a separate final PR. Tiny adjacent packets can be grouped after the semantics are stable. The purpose of packets is to reduce inference risk, not to maximize GitHub PR count.
+Plan as many packets as needed to remove ambiguity. In this workflow, “PR” is often shorthand for a trusted implementation unit, not necessarily a final merged GitHub PR. Do not assume each packet must be separate. After semantics and technical methods are stable, adjacent packets can be grouped when cognitive load is low and the work is mostly mechanical/stamina rather than product judgment. The purpose of packets is to reduce inference risk, not to maximize GitHub PR count.
 
 ## Good packet prompt shape
 
