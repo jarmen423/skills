@@ -32,7 +32,7 @@ Separate every important behavior into three layers:
 2. **Technical method** — the concrete mechanism that enforces the rule.
 3. **Verification oracle** — tests, commands, or report checks proving the method enforces the concept.
 
-If the concept is clear but the implementation is not, pause and compare viable technical methods with the user before choosing. Explain the engineering implications of each option (safety, performance, reviewability, extensibility, failure modes) and explicitly verify that the chosen method actually enforces the conceptual rule.
+If the concept is clear but the implementation is not, pause and compare viable technical methods with the user before choosing. Start concisely: name the gap, why capable engineers could disagree, then list 2-3 plausible engineering approaches in one sentence each ("Engineer 1 might... Engineer 2 might..."). Only expand tradeoffs after the user picks the contested area to examine. Then explain engineering implications (safety, performance, reviewability, extensibility, failure modes) and explicitly verify that the chosen method enforces the conceptual rule.
 
 Do not leave these for implementer agents to invent.
 

@@ -41,7 +41,18 @@ For every product-critical behavior, decide:
 3. **Verification oracle** — how we prove it.
    - Example: A query with `expected: []` and forbidden `source_turn_id=t3` passes only when no hit resolves to that turn, while a lower-level storage/index test proves raw-only records are never placed in the ordinary retrieval lane.
 
-When several technical methods could satisfy the concept, compare them with the user before writing an implementation prompt. Cover safety, performance, observability, UI/report implications, extensibility, and failure modes. The chosen method must be explicitly tied back to the conceptual rule.
+When several technical methods could satisfy the concept, compare them with the user before writing an implementation prompt. Start with an **engineer divergence scan** before deep explanation:
+
+```text
+Gap: exact schema shape.
+Why it is a gap: multiple reasonable implementations encode the same concept but create different matcher/reporting contracts.
+Engineer 1 might use `{kind, value}` objects for a uniform identity enum.
+Engineer 2 might use single-key objects like `{source_turn_id: "t4"}` for concise hand-authored JSON.
+Engineer 3 might use `{field, equals, required}` as a generic assertion DSL.
+Recommendation to examine first: whether this needs a simple identity primitive or a mini assertion language.
+```
+
+Keep this first pass concise. Only expand tradeoffs after the user identifies which contested choice to examine. Then cover safety, performance, observability, UI/report implications, extensibility, and failure modes. The chosen method must be explicitly tied back to the conceptual rule.
 
 ## Split-pressure checklist
 
