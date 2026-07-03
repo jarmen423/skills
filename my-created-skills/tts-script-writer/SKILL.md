@@ -217,20 +217,44 @@ and non-verbal delivery. **Tags must describe auditory actions only.**
 | Product Demo | 3-6 tags | Enthusiasm for features, professionalism for specs |
 | Meditation / Calm | 4-6 tags | Soft tags: `[whisper]`, `[softly]`, `[gently]` |
 
+### Fish Audio S2 / S2.1-Pro Tags
+
+Fish Audio uses `[square bracket]` natural-language emotion cues. The tag set is **not fixed** — any descriptive expression like `[whispers sweetly]` or `[laughing nervously]` works.
+
+**Sample emotions:** `[happy]`, `[sad]`, `[angry]`, `[excited]`, `[calm]`, `[nervous]`, `[confident]`, `[surprised]`, `[scared]`, `[worried]`, `[frustrated]`, `[empathetic]`, `[embarrassed]`, `[disgusted]`, `[proud]`, `[curious]`, `[sarcastic]`, `[determined]`, `[bored]`, `[confused]`, `[anxious]`
+**Tones:** `[whispering]`, `[shouting]`, `[screaming]`, `[soft tone]`, `[in a hurry tone]`
+**Sounds:** `[laughing]`, `[chuckling]`, `[sobbing]`, `[crying loudly]`, `[sighing]`, `[groaning]`, `[panting]`, `[gasping]`, `[yawning]`, `[snoring]`
+**Pauses:** `[break]` (short), `[long-break]` (extended)
+**No SSML support.** Use `[break]` for pauses instead.
+
+### xAI Grok Voice Tags
+
+Grok supports **inline** `[tag]` at specific points and **wrapping** `<tag>text</tag>` for delivery style.
+
+**Inline tags:** `[pause]`, `[long-pause]`, `[hum-tune]`, `[laugh]`, `[chuckle]`, `[giggle]`, `[cry]`, `[tsk]`, `[tongue-click]`, `[lip-smack]`, `[breath]`, `[inhale]`, `[exhale]`, `[sigh]`
+**Wrapping tags:** `<whisper>text</whisper>` · `<shouting>text</shouting>` · `<sing>text</sing>` · `<hum>text</hum>` · `<narrate>text</narrate>` · `<fast>text</fast>` · `<slow>text</slow>`
+
 ---
 
 ## 7. Model Selection Quick Guide
 
-| Model | Best For | Break Tags | Audio Tags | Phoneme Tags |
-|-------|----------|------------|------------|--------------|
-| Eleven v3 | Expressive narration, character voices | No | Yes | No |
-| Multilingual v2 | Natural speech, multiple languages | Yes | No | No |
-| Flash v2.5 | Low latency, real-time | No | No | No |
-| Flash v2 | Fast generation, English | Yes | No | Yes |
-| English v1 | Legacy English content | Yes | No | Yes |
+| Model | Provider | Best For | Audio Tags | Break Tags |
+|-------|----------|----------|------------|------------|
+| Eleven v3 | ElevenLabs | Expressive narration, character voices | Yes¹ | No |
+| Multilingual v2 | ElevenLabs | Natural speech, multiple languages | No | Yes³ |
+| S2.1-Pro-Free | Fish Audio | Free TTS (free till Jul 2026) | Yes² | No⁴ |
+| S2-Pro | Fish Audio | Premium expressive TTS | Yes² | No⁴ |
+| Grok Voice | xAI | Expressive + custom voices | Yes⁵ | Yes⁵ |
 
-**Recommendation**: Use v3 for character-driven or expressive content.
-Use Multilingual v2 for natural, neutral narration in any language.
+¹ v3 uses `[bracket]` tags — no SSML `<break>` support.  
+² Fish uses `[bracket]` natural-language cues. `[break]`/`[long-break]` for pauses.  
+³ Supports SSML `<break time="x.xs" />`. No bracket audio tags.  
+⁴ Fish uses `[break]`/`[long-break]` instead of SSML `<break>`.  
+⁵ xAI supports inline `[tag]` + wrapping `<tag>text</tag>`.
+
+**Recommendation**: Use Eleven v3 for character-driven or expressive content.
+Use Fish S2.1-Pro-Free for budget-friendly expressive TTS. Use Grok Voice when
+inline emotion tags and custom voice cloning are needed.
 
 ---
 
@@ -244,7 +268,7 @@ Deliver the final script in this structure:
 ## Metadata
 - **Content Type**: [Explainer / Audiobook / Podcast / Demo / etc.]
 - **Target Duration**: [e.g., 3-5 minutes]
-- **TTS Model**: [Eleven v3 / Multilingual v2 / Flash v2.5]
+- **TTS Model**: [Eleven v3 / Fish S2.1-Pro / xAI Grok / Multilingual v2]
 - **Voice**: [Voice name or description]
 - **Audio Tags**: [count]
 
@@ -298,6 +322,8 @@ Before delivering the script, verify:
 - [ ] Paragraph breaks create natural breathing room
 - [ ] No raw code syntax — all technical content spoken-out
 - [ ] Pronunciation notes included for ambiguous terms
-- [ ] Model-appropriate pause control (`<break>` for v2, ellipses/tags for v3)
+- [ ] Model-appropriate pause control (`<break>` for v2, `[break]/[long-break]` for Fish, ellipses/tags for v3)
 - [ ] Phoneme tags only used with compatible models (Flash v2, English v1)
 - [ ] CTA or closing is specific to the topic (not generic)
+- [ ] If using Fish Audio: uses `[break]`/`[long-break]` for pauses, no SSML
+- [ ] If using xAI Grok: inline `[pause]`/`[long-pause]` or wrapping tags as appropriate

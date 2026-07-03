@@ -129,7 +129,7 @@ You can combine multiple audio tags for complex emotional delivery. Experiment w
 Match tags to the voice's character and training data. A serious, professional voice may not respond well to playful tags like `[giggles]` or `[mischievously]`. Keep tags appropriate for the context.
 
 ### Text Structure
-Text structure strongly influences output with v3. Use natural speech patterns, proper punctuation, and clear emotional context for best results.
+Text structure strongly influences output with v3. Use natural speech patterns, proper punctuation, and clear emotional context for best results. **Important: v3 does NOT support SSML `<break>` tags** — use ellipses, commas, or `[short pause]`/`[long pause]` tags instead.
 
 ### Experimentation
 There are likely many more effective tags beyond this list. You can infer descriptive emotional states and actions that fit the context.

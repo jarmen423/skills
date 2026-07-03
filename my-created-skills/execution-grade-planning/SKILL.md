@@ -21,6 +21,7 @@ Use this when:
 - A child plan or architecture doc is strong strategically but leaves schema, matching, failure precedence, setup safety, or report shape undecided.
 - Multiple agents will execute sequentially from prompts.
 - A one-PR plan hides several independent decisions.
+- **The user mentions existing repos or codebases that might overlap with what needs building.** This is a signal to run Phase 0 audit before any planning — don't plan from scratch when pre-built components may already exist.
 
 ## Planning stance
 
@@ -35,6 +36,42 @@ Separate every important behavior into three layers:
 If the concept is clear but the implementation is not, pause and compare viable technical methods with the user before choosing. Start concisely: name the gap, why capable engineers could disagree, then list 2-3 plausible engineering approaches in one sentence each ("Engineer 1 might... Engineer 2 might..."). Only expand tradeoffs after the user picks the contested area to examine. Then explain engineering implications (safety, performance, reviewability, extensibility, failure modes) and explicitly verify that the chosen method enforces the conceptual rule.
 
 Do not leave these for implementer agents to invent.
+
+## Phase 0: Codebase Audit
+
+Before writing a single execution packet, check whether existing code already solves parts of the problem. This is especially important when the user mentions other repos or projects they own.
+
+### Process
+
+1. **Discover** — Ask the user if they have other repos/projects that might overlap. If they name one, clone/fetch it.
+2. **Map** — Read the full file tree, README, and key sources of each candidate repo. Build a functional checklist of what it provides.
+3. **Compare** — Side-by-side table of capabilities between what's needed and what exists. Classify each capability as: **already exists**, **partially exists**, **missing**.
+4. **Classify the relationship** between the repos:
+   - **Overlapping** — same language, same area, same function. Candidate for dedup or replace.
+   - **Complementary** — different layer of the same stack (e.g. one is the comms bus, the other is the execution engine). Candidate for absorb as dependency.
+   - **Unrelated** — different domain entirely. No reuse possible.
+5. **Decide** — Three paths to present to the user:
+   - **Overwrite** — one repo replaces the other entirely (only when truly overlapping).
+   - **Absorb** — add the other repo as a dependency/submodule and extend it.
+   - **Build fresh** — nothing reusable, start new.
+
+### Comparison table template
+
+```markdown
+| Capability | Repo A | Repo B | Status |
+|---|---|---|---|
+| Bidirectional NATS pub/sub | Full (HubClient) | One-directional only | Repo A provides |
+| Provider abstraction | Nothing | Protocol + 2 impls | Repo B provides |
+| Structured envelope protocol | Yes (Envelope) | Raw JSON | Repo A provides |
+| ... | ... | ... | ... |
+```
+
+### Pitfalls
+
+- Do not overwrite codebases in different languages unless you plan a full rewrite.
+- Do not assume "has NATS code" means "solves the NATS problem" — check directionality (pub only? sub only? bidirectional?).
+- Do not skip reading the actual source — README descriptions are aspirational.
+- Present the decision to the user before acting — "should we overwrite, absorb, or build fresh?" is their call.
 
 ## Execution packet format
 
@@ -68,6 +105,7 @@ Split whenever a packet mixes distinct risk types:
 ## References
 
 - `references/execution-grade-packet-planning.md` — detailed session-derived guidance and examples for turning broad plans into no-inference implementation packets.
+- `references/codebase-audit-methodology.md` — structured approach for comparing existing repos before planning: discovery, capability mapping, classification, decision fork.
 
 ## Pitfalls
 

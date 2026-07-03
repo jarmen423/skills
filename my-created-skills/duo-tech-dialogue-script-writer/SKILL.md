@@ -431,3 +431,19 @@ Before delivering the script, verify:
 - [ ] Script chunked if total characters exceed 2,000
 - [ ] Each chunk ends on a natural beat (not mid-sentence)
 - [ ] No `<break>` tags used (v3 does not support them)
+
+---
+
+## 11. Multi-Provider Tag Reference
+
+When using **Fish Audio S2/S2.1-Pro** instead of ElevenLabs (e.g., for budget-friendly single-speaker narration):
+
+- `[happy]`, `[sad]`, `[angry]`, `[excited]`, `[calm]`, `[nervous]`, `[confident]`, `[surprised]`, `[scared]`, `[worried]`, `[frustrated]`, `[empathetic]`, `[embarrassed]`, `[curious]`, `[sarcastic]`, `[determined]`, `[bored]`, `[confused]`, `[anxious]`
+- `[whispering]`, `[shouting]`, `[screaming]`, `[soft tone]`, `[in a hurry tone]`
+- `[laughing]`, `[chuckling]`, `[sobbing]`, `[crying loudly]`, `[sighing]`, `[groaning]`, `[panting]`, `[gasping]`, `[yawning]`, `[snoring]`
+- `[break]` (short pause), `[long-break]` (extended pause)
+
+When using **xAI Grok Voice**:
+
+- Inline: `[pause]`, `[long-pause]`, `[hum-tune]`, `[laugh]`, `[chuckle]`, `[giggle]`, `[cry]`, `[tsk]`, `[tongue-click]`, `[lip-smack]`, `[breath]`, `[inhale]`, `[exhale]`, `[sigh]`
+- Wrapping: `<whisper>text</whisper>`, `<shouting>text</shouting>`, `<sing>text</sing>`, `<hum>text</hum>`, `<narrate>text</narrate>`, `<fast>text</fast>`, `<slow>text</slow>`

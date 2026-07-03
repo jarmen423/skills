@@ -179,6 +179,21 @@ them strategically before or after the segment they modify.
 | Shorts | 3-5 tags | Punchy; one tag per major beat |
 | Code Report | 8-12 tags | More room for emotional arc |
 
+### Fish Audio S2 / S2.1-Pro Tags
+
+Fish Audio uses `[square bracket]` natural-language emotion cues — **not a fixed list**, any descriptive expression works:
+
+- **Emotions:** `[happy]`, `[sad]`, `[angry]`, `[excited]`, `[calm]`, `[nervous]`, `[confident]`, `[surprised]`, `[scared]`, `[worried]`, `[frustrated]`, `[empathetic]`, `[embarrassed]`, `[curious]`, `[sarcastic]`, `[determined]`, `[bored]`, `[confused]`, `[anxious]`
+- **Tones:** `[whispering]`, `[shouting]`, `[screaming]`, `[soft tone]`, `[in a hurry tone]`
+- **Sounds:** `[laughing]`, `[chuckling]`, `[sobbing]`, `[sighing]`, `[groaning]`, `[panting]`, `[gasping]`, `[yawning]`, `[snoring]`
+- **Pauses:** `[break]` (short), `[long-break]` (extended)
+- **No SSML.** Use `[break]`/`[long-break]` for pauses.
+
+### xAI Grok Voice Tags
+
+- **Inline:** `[pause]`, `[long-pause]`, `[hum-tune]`, `[laugh]`, `[chuckle]`, `[giggle]`, `[cry]`, `[tsk]`, `[tongue-click]`, `[lip-smack]`, `[breath]`, `[inhale]`, `[exhale]`, `[sigh]`
+- **Wrapping:** `<whisper>text</whisper>`, `<shouting>text</shouting>`, `<sing>text</sing>`, `<hum>text</hum>`, `<narrate>text</narrate>`, `<fast>text</fast>`, `<slow>text</slow>`
+
 ---
 
 ## 6. Pause & Pacing Control
@@ -218,7 +233,7 @@ Deliver the final script in this exact structure:
 
 ## Metadata
 - **Target Duration**: [e.g., 95-105s]
-- **TTS Model**: [Eleven v3 / Multilingual v2 / Flash v2.5]
+- **TTS Model**: [Eleven v3 / Fish S2.1-Pro / xAI Grok / Multilingual v2]
 - **Voice**: [Voice name or description]
 - **Meme Inserts**: [count]
 - **Audio Tags**: [count]
@@ -265,9 +280,7 @@ Deliver the final script in this exact structure:
 
 ```
 [excited] TypeScript is JavaScript that went to college.
-
-<break time="0.5s" />
-
+[short pause]
 It adds static types so your code breaks in the editor instead of in production.
 [short pause]
 
