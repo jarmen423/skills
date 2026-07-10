@@ -77,6 +77,7 @@ Before writing a single execution packet, check whether existing code already so
 
 Each packet should include:
 
+- cite parent plans at the top but ensure they are accurate first
 - Packet ID and goal.
 - Conceptual rules decided up front.
 - Exact technical contract: JSON shapes, field names, semantics, precedence, defaults.
