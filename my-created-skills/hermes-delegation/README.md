@@ -10,6 +10,7 @@ CLI, plus the shared supervision workflow those runs use.
 | `grok-build-cli/` | xAI Grok Build (`grok -p`) |
 | `antigravity-cli/` | Antigravity (`agy -p`) |
 | `muse-code-cli/` | Meta Muse Code (`muse exec`) |
+| `devin-cli/` | Cognition Devin (`devin -p`) |
 | `coding-agent-supervision/` | Class workflow for background runs: liveness, recovery, review |
 
 Each directory is a skill (`SKILL.md` plus any `references/`). The live copies
