@@ -124,14 +124,10 @@ Full CSS for each (plus the Linear areas-as-data component) is in `references/te
 - [ ] Hover ≤2 properties, gated. Entrance once. Live demos pause off-screen and under reduced motion
 - [ ] `<section>` + `<article>`s, DOM = reading order, decorative `aria-hidden`, focus visible
 
-## In this repo (agent-memory-labs-frontend)
+## In this repo (agent-memory-labs-frontend): current state, context not constraints
 `src/components/home/bento.tsx` is a 7-cell bento on `lg:grid-cols-6` (`md:grid-cols-2`):
 - rows run 4+2 / 2+2+2 / 3+3
 - every cell is a `SpotlightCard` with `p-6`
 - the cells use live demos (the time-travel scrubber, the hover-able knowledge graph, a code-intel popover) and the `CardText` title + muted-body lockup
 
-When changing it:
-- keep one hero (the 4-span time-travel cell)
-- keep the three footprints
-- give new cells the `CardText` lockup
-- add any decorative animation behind `motion-safe:`, as the graph's beams already are
+This is the starting point, not a template to preserve. A redesign can replace it with a different layout or a different story, or drop the bento entirely if another format tells the product story better. Whatever you build, the rules above apply to the new version (one hero, at most three footprints, one lockup style), and decorative animation goes behind `motion-safe:`.

@@ -168,7 +168,7 @@ Style through its data attributes: `[cmdk-item][data-selected="true"]`, `[cmdk-g
 - [ ] Nested pages pop with Escape or Backspace. Query preserved on back
 - [ ] List height transitions (~100ms). The page doesn't shift when scroll locks
 
-## In this repo (agent-memory-labs-frontend)
+## In this repo (agent-memory-labs-frontend): current state, context not constraints
 `src/components/command-menu.tsx` is a custom implementation. What it already does well:
 - ⌘K toggle, restoring focus via `restoreRef`
 - the combobox, listbox and option roles, with `aria-activedescendant`

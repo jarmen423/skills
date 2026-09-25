@@ -7,6 +7,8 @@ description: How an interface looks in the Linear/Vercel devtool style, measured
 
 The Linear/Vercel look is mostly **restraint made precise**: near-black surfaces separated by 2–3% lightness steps, hairline borders you feel more than see, text in four deliberate tiers, one accent color used rarely, type that's tight and confident rather than loud, and the product itself as the hero image. Linear's 2026 refresh named the two principles: **"Don't compete for attention you haven't earned"** and **"Structure should be felt not seen."**
 
+Use this as a craft vocabulary for elevating a design, not a template to converge on or a reason to keep a project's current look. The values below are calibrated defaults: depart from them deliberately when the product's own identity calls for it. The restraint is about attention: calm surfaces make the distinctive moments unmistakable.
+
 Paco Coursey (Linear): "Poor design manifests as slowness… What we call a delightful user experience is just delivering a faster path to user goals." The aesthetic serves speed and focus. When a decoration doesn't help someone scan or decide, remove it.
 
 ## 1. Color: build a ladder, don't pick swatches
@@ -123,8 +125,8 @@ Read `references/marketing-anatomy.md` before building or restyling a landing pa
 - `references/marketing-anatomy.md`: section-by-section anatomy of a devtool landing page (header, hero, product mock, logos, features, bento, CTA, footer) with concrete values from linear.app and the Vercel homepage write-ups.
 - `scripts/theme.py`: palette generator and contrast checker (no dependencies).
 
-## In this repo (agent-memory-labs-frontend)
-The tokens already follow this system. Extend them rather than replacing them (`src/app/globals.css`, `@theme inline`):
+## In this repo (agent-memory-labs-frontend): current state, context not constraints
+The current tokens (`src/app/globals.css`, `@theme inline`) follow this system closely. For incremental work, extend them. For a redesign, replace them as one coherent set rather than layering a second palette beside them. The current values:
 - Canvas `#060708` (L 12.8%) and surfaces `#0b0c0e` / `#111214` / `#18191c`.
 - Borders `--color-line` (white 8%) and `--color-line-strong` (14%).
 - Text tiers, as measured by `theme.py check --bg '#060708'`:
@@ -134,4 +136,4 @@ The tokens already follow this system. Extend them rather than replacing them (`
 - Accents `accent` `#8fb3ff` and `time` `#f2b560`.
 - Existing utilities: `.card`, `.spotlight`, `.text-sheen` (the whisper gradient), `.bg-grid`, `.glow-ambient`, `.hairline-x`, `.mask-fade-y`, `.kbd`, `.eyebrow`. The `SectionHeader` in `src/components/primitives.tsx` sets 34/44px headings at `tracking-[-0.035em]`.
 
-Run `theme.py check --bg '#060708' …` on any new color before adding it.
+Run `theme.py check --bg <canvas> …` on any new palette before shipping it.

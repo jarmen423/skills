@@ -1,21 +1,21 @@
 ---
 name: signature-effects
-description: How to build and budget decorative effects on marketing pages — spotlights, masked grid and dot backgrounds, light beams and lamps, border glows, pointer-tracked card lights, SVG beam pulses, grain, edge fades, tilt and glare, blur-in text, orbs and canvas fields — without effect soup, jank or accessibility failures, distilled from Aceternity UI's source and the Linear, Vercel and Cursor effects it recreates. Use when asked for a hero background, glow, beam, shimmer, sparkles, aurora or animated border, when adapting an Aceternity or Magic UI component, or when a page has heavy decorative animation. Product-UI transitions belong to interface-motion.
+description: How to create bespoke signature pieces and build and budget decorative effects on marketing pages — spotlights, masked grid and dot backgrounds, light beams and lamps, border glows, pointer-tracked card lights, SVG beam pulses, grain, edge fades, tilt and glare, blur-in text, orbs and canvas fields — without effect soup, jank or accessibility failures, distilled from Aceternity UI's source and the Linear, Vercel and Cursor effects it recreates. Use when asked for a hero background, glow, beam, shimmer, sparkles, aurora or animated border, when adapting an Aceternity or Magic UI component, or when a page has heavy decorative animation. Product-UI transitions belong to interface-motion.
 ---
 
 # Signature effects
 
-Effects are the most visible and least important part of a devtool page. Linear, Vercel and Cursor each have one or two signatures (a lamp, a glare card, a border glow) and use them sparingly against calm, dark surfaces. Aceternity UI rebuilt those signatures as copy-paste components. Its creator, Manu Arora, is clear about how to use them: **"good animation should support the interface, not become the interface"** and "the best animation usually isn't the one you notice." He also criticizes AI-generated landing pages for their uniform visual weight, vague copy and excessive animation (paraphrased from his posts).
+Generic effects are the most visible and least important part of a devtool page. Signature pieces, conceived for the product, are the opposite: they're what people remember. Linear, Vercel and Cursor each have one or two signatures (a lamp, a glare card, a border glow) and use them sparingly against calm, dark surfaces. Aceternity UI rebuilt those signatures as copy-paste components. Its creator, Manu Arora, is clear about how to use them: **"good animation should support the interface, not become the interface"** and "the best animation usually isn't the one you notice." He also criticizes AI-generated landing pages for their uniform visual weight, vague copy and excessive animation (paraphrased from his posts).
 
-The job is to pick the right effect, build it cheaply, and make it removable.
+The job is to spend boldness where it counts. Create one or two signature pieces that belong to this product, build them cheaply, and keep everything around them calm so they land. The budget below is about not *stacking* generic effects. It's never a reason to avoid a big idea.
 
 ## 1. The effect budget (decide before building)
-1. **One hero effect per viewport.** Choose a single light source or motion signature (spotlight, beams, lamp, aurora *or* orbs). Everything else is static texture (grid, dots, grain) plus local hover micro-interactions. Aceternity's demos show each effect alone; "effect soup" comes from stacking the demos.
+1. **One hero effect per viewport** (a heuristic synthesized from the sources, not a quoted rule). Choose a single light source or motion signature (spotlight, beams, lamp, aurora *or* orbs). Everything else is static texture (grid, dots, grain) plus local hover micro-interactions. Aceternity's demos show each effect alone; "effect soup" comes from stacking the demos.
 2. **Ambient loops are slow and faint.** Periods of 7s or more (beams 10–20s, orbs 20–40s, aurora 60s), light alphas ≤0.2, strokes ≤0.4, and random phase offsets so nothing pulses in sync.
 3. **Interaction effects stay local.** Spotlights and glows appear only on the hovered card, only for fine pointers (`@media (hover: hover) and (pointer: fine)`), and ease in (~300ms).
 4. **Decoration never carries information.** The page must read fully with every effect removed, because that's what reduced-motion and low-power users get.
 5. **Match the effect to the product and re-tint it.** Copied verbatim (cyan `#18CCFC` → indigo `#6344F5` → violet `#AE48FF`, `from-neutral-200 to-neutral-500` headlines, `bg-black/[0.96]`), these read as "Aceternity template". Re-tint to the brand's palette and re-time to its motion personality.
-6. **The restraint test:** if you removed the effect, would anyone notice anything but less noise? If not, remove it.
+6. **The decoration test:** does the effect express the product's idea, or is it generic decoration? Remove decoration that adds only noise. When an effect carries the idea, make it bolder and more specific rather than smaller.
 
 ## 2. Choose a primitive
 Nearly every effect is one of these. Code for each is in `references/primitives.md`.
@@ -68,7 +68,7 @@ Aceternity's source is a catalog of good ideas with production gaps: only 1 of ~
 ## References
 - `references/primitives.md`: minimal, dependency-light implementations of every primitive above (CSS-first, with React/Motion variants), plus the values Aceternity ships for each (durations, alphas, blur sizes, palettes), and the Glare Card "ease in then track" trick.
 
-## In this repo (agent-memory-labs-frontend)
+## In this repo (agent-memory-labs-frontend): current state, context not constraints
 The effects already present, all in `src/app/globals.css`:
 - `.spotlight`: a pointer-tracked border and fill light, driven by `--mx` and `--my`, which `SpotlightCard` writes on the element
 - `.bg-grid`: a 64px grid at 4.5% white
@@ -77,4 +77,4 @@ The effects already present, all in `src/app/globals.css`:
 - `.text-sheen`, `.shimmer-text`
 - the `animate-beam` SVG pulse (used with `motion-safe:` in `home/bento.tsx`)
 
-The hero already stacks three soft glows plus the masked grid: the `glow-ambient` layer in `src/app/page.tsx`, and in `home/hero-preview.tsx` a blurred hour-tinted glow and an amber one. Together they read as one ambient light, which is already the budget. Don't add another. If you touch the hero, consider consolidating them. `SpotlightCard` writes `--mx`/`--my` straight from `pointermove` without rAF coalescing. It's fine at this scale, but add rAF coalescing if many cards animate at once.
+The hero already stacks three soft glows plus the masked grid: the `glow-ambient` layer in `src/app/page.tsx`, and in `home/hero-preview.tsx` a blurred hour-tinted glow and an amber one. Together they read as one ambient light. That's the current state, not a limit: a new hero signature should *replace* these glows rather than stack on top of them. `SpotlightCard` writes `--mx`/`--my` straight from `pointermove` without rAF coalescing. It's fine at this scale, but add rAF coalescing if many cards animate at once.

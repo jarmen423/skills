@@ -132,8 +132,8 @@ When asked to review animations, reply with one markdown table (`| Before | Afte
 | hover scale with no media query | wrap in `@media (hover: hover) and (pointer: fine)` | stuck hover on touch |
 | same enter and exit duration | exit ~20% faster | leaving should get out of the way |
 
-## In this repo (agent-memory-labs-frontend)
+## In this repo (agent-memory-labs-frontend): current state, context not constraints
 - The library is `framer-motion` 12 (import from `"framer-motion"`). Code copied from sources that import `motion/react` needs the import changed; the API is the same.
-- `--ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1)` in `src/app/globals.css` is already a strong ease-out (Tailwind `ease-out-soft`), so reuse it for enters and exits. If you need the in-out or drawer curves, add them next to it in `@theme` rather than inlining new beziers.
-- The global `prefers-reduced-motion` block at the bottom of `globals.css` zeroes every animation and transition, fades included. Decorative loops in this codebase already use `motion-safe:` (e.g. `motion-safe:animate-beam`), so follow that pattern for new loops.
+- `--ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1)` in `src/app/globals.css` is the current strong ease-out (Tailwind `ease-out-soft`). Whether you extend the current motion values or define a new motion language, keep curves and durations as tokens in `@theme` rather than inline beziers.
+- The global `prefers-reduced-motion` block at the bottom of `globals.css` zeroes every animation and transition, fades included. Decorative loops in this codebase already use `motion-safe:` (e.g. `motion-safe:animate-beam`), so gate new loops the same way.
 - `src/components/home/bento.tsx` drives the time-travel scrubber with `useSpring(…, { stiffness: 220, damping: 30 })`, and `useTransform` moves the cursor line without re-rendering. It also mirrors the spring into React state (`useMotionValueEvent(x, "change", setPos)`) to recompute which claims are valid, which re-renders every frame. That's acceptable for a handful of rows, but if the scrubbed content grows, quantize it (only `setPos` when the derived state actually changes).

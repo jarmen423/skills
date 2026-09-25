@@ -120,7 +120,7 @@ Severity: `[must]` for accessibility, data-loss or broken-interaction issues; `[
 - [ ] `…`, curly quotes, `tabular-nums` where numbers change, `Intl` for dates and numbers
 - [ ] Icon-only controls have `aria-label`; decorative layers have `aria-hidden` and `pointer-events: none`
 
-## In this repo (agent-memory-labs-frontend)
+## In this repo (agent-memory-labs-frontend): current state, context not constraints
 - The global focus style is `:focus-visible { outline: 2px solid var(--color-accent) }` in `src/app/globals.css` (base layer). Any Tailwind `outline-none` utility overrides it, and shadcn primitives in `src/components/ui/` use that class, so check that each one supplies its own `focus-visible:` ring.
 - The global rule also sets `border-radius: 6px` on focus. It's in the base layer, so `rounded-*` utilities and `.card` override it. It only visibly affects focused elements with no radius of their own, like links and images.
 - Tokens: `--color-ring` (#8fb3ff) for focus, `--color-canvas` for the ring gap, `.kbd` for keyboard hints. The bottom of `globals.css` has a blanket `prefers-reduced-motion` block that sets every animation and transition to ~0ms, fades included. That's blunter than "gentler, not zero", but it does stop every loop. New decorative loops should still use `motion-safe:`.

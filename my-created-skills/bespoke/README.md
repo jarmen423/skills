@@ -2,6 +2,8 @@
 
 Seven agent skills for building interfaces in the Linear / Vercel "devtool" school, where visual design, motion and front-end engineering are one job. Each one is distilled from primary sources: production CSS, library source code and the designers' own writing. They are not generic advice.
 
+**Stance:** the skills are meant to **elevate a project, not maintain it**. An agent using them treats the project's current design as material to critique, and breaks out of its patterns to give it a distinct, bespoke point of view. It stays within the existing look only when explicitly told to. The "restraint" in the sources (Rauno's 90% familiar / 10% novel, Linear's "don't compete for attention you haven't earned") is a taste principle about where attention goes: keep the frequent paths calm so the bold, signature moments land. It is never a reason to preserve something generic.
+
 | Skill | Use it for | Distilled from |
 |---|---|---|
 | `design-engineering` | Entry point: the workflow (intent → references → static build → motion → sanding → perf/a11y → review) and routing | Vercel's design-engineering team, Rauno Freiberg, Emil Kowalski, Paco Coursey, Manu Arora |
