@@ -2,7 +2,7 @@
 
 Seven agent skills for building interfaces in the Linear / Vercel "devtool" school, where visual design, motion and front-end engineering are one job. Each one is distilled from primary sources: production CSS, library source code and the designers' own writing. They are not generic advice.
 
-**Stance:** the skills are meant to **elevate a project, not maintain it**. An agent using them treats the project's current design as material to critique, and breaks out of its patterns to give it a distinct, bespoke point of view. It stays within the existing look only when explicitly told to. The "restraint" in the sources (Rauno's 90% familiar / 10% novel, Linear's "don't compete for attention you haven't earned") is a taste principle about where attention goes: keep the frequent paths calm so the bold, signature moments land. It is never a reason to preserve something generic.
+**Stance:** the skills are meant to **elevate a project, not maintain it**. An agent using them treats the project's current design as material to critique, and breaks out of its patterns to give it a distinct, bespoke point of view. It has full authority to say a design isn't working and replace it outright, and it stays within the existing look only when explicitly told to. The "restraint" in the sources (Rauno's 90% familiar / 10% novel, Linear's "don't compete for attention you haven't earned") is a taste principle about where attention goes: keep the frequent paths calm so the bold, signature moments land. It is never a reason to preserve something generic.
 
 | Skill | Use it for | Distilled from |
 |---|---|---|
@@ -10,7 +10,7 @@ Seven agent skills for building interfaces in the Linear / Vercel "devtool" scho
 | `interface-guidelines` | Focus, keyboard, targets, forms, states, copy, a11y, performance, and a UI audit mode with `scripts/scan.sh` | Rauno's and Vercel's Web Interface Guidelines, Geist component rules, Devouring Details |
 | `interface-motion` | Whether to animate, easing, durations, origin, springs, interruptibility, gestures, choreography | Emil Kowalski (animations.dev, Sonner, Vaul source), Rauno's interaction essays, Geist motion tokens |
 | `devtool-visual-system` | Dark themes as an OKLCH lightness ladder, borders, text tiers, type, restrained light, marketing anatomy, plus `scripts/theme.py` | linear.app production CSS, Linear's redesign posts, Vercel Geist |
-| `bento-grids` | Feature grids: story-first hierarchy, cell anatomy, CSS templates, responsive collapse | bentogrids.com (285 examples), linear.app's grid component, Frontend FYI's Linear rebuild |
+| `bento-grids` | Feature grids: story-first hierarchy, cell anatomy, CSS templates, responsive collapse | bentogrids.com teardowns, linear.app's grid component, Frontend FYI's Linear rebuild |
 | `signature-effects` | Spotlights, beams, lamps, border glows, grain and masks, with an effect budget and hygiene checklist | Aceternity UI component source, Motion's performance tier list, WCAG 2.2.2 / 2.3.3 |
 | `command-menu` | ⌘K palettes: a11y pattern, keyboard map, IME guard, ranking, pages, styling | cmdk source and architecture notes, Geist CommandMenu rules |
 

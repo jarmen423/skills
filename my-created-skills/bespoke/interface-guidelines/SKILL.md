@@ -13,11 +13,11 @@ The rules come from people who ship this work at Vercel and Linear. Rauno Freibe
 
 **Build mode** (you are writing UI). Apply the rules for the element types you touch. For a component type listed in `references/components.md` (button, tooltip, modal, toast, skeleton, spinner, menu, tabs, segmented control, input, empty state, command menu), read its entry before writing it. Finish with the quick pass at the end of this file.
 
-**Audit mode** (the user asks for a review, audit or polish pass).
+**Audit mode** (the user asks for a review or audit).
 1. Scope the files (the diff, a route, or the paths named).
 2. Run the scanner for mechanical candidates: `bash <this-skill-dir>/scripts/scan.sh <paths…>` (`<this-skill-dir>` is the base directory this skill was loaded from). It greps for known anti-patterns. Treat every hit as a *candidate*: open the line and confirm it before reporting, because grep can't see context (a global focus style, a wrapper that adds the label, a spread that isn't an ellipsis).
 3. Read each file against the relevant categories in `references/rules.md`. The scanner can't find missing things (no empty state, no `aria-live`, no Undo), so this reading step is where most real findings come from.
-4. Report in the format below. Offer to fix; don't silently rewrite unless asked.
+4. Report in the format below. If the task is only a review, stop there and offer the fixes. If it's part of building or redesigning, fix them as you go.
 
 ## The rules that matter most
 
