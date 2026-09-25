@@ -1,6 +1,6 @@
 ---
 name: interface-guidelines
-description: How an interface behaves — the small rules that make web UI feel solid and trustworthy, from Rauno Freiberg's and Vercel's Web Interface Guidelines and Geist's component rules. Covers focus rings, keyboard support, hit targets, forms and validation, loading/empty/error states, toasts, tooltips, menus, dialogs, tabs, UI copy, touch, hydration and accessibility, with an audit mode (scanner script, file:line report). Use when building or reviewing any interactive component, when asked to audit, sand or check accessibility, or when something feels broken or unreliable. Animation belongs to interface-motion; colors and type to devtool-visual-system.
+description: How an interface behaves — the small rules that make web UI feel solid and trustworthy, from Rauno Freiberg's and Vercel's Web Interface Guidelines and Geist's component rules. Covers focus rings, keyboard support, hit targets, forms and validation, loading/empty/error states, toasts, tooltips, menus, dialogs, tabs, UI copy, touch, hydration and accessibility, with an audit mode (scanner script, file:line report). Use as the quality floor when turning new designs, redesigns or prototypes into working UI, when building or reviewing any interactive component, when asked to audit, sand or check accessibility, or when something feels broken or unreliable. Animation belongs to interface-motion; colors and type to devtool-visual-system.
 ---
 
 # Interface guidelines

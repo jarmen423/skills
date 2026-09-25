@@ -1,6 +1,6 @@
 ---
 name: devtool-visual-system
-description: How an interface looks in the Linear/Vercel devtool style, measured from their production CSS. Covers dark themes as an OKLCH lightness ladder, low-contrast borders, text tiers, a rationed accent, typography (Inter/Geist, tracking, weights, two-tone headings), elevation without shadows, restrained glow and masks, buttons, headers and landing-page anatomy with the product as the hero, plus a script that generates and contrast-checks palettes. Use when setting up or changing tokens, colors, themes, type or surfaces, when asked for something like Linear or Vercel, or when a UI looks cheap, flat, muddy or generic.
+description: How an interface looks in the Linear/Vercel devtool style, measured from their production CSS. Covers dark themes as an OKLCH lightness ladder, low-contrast borders, text tiers, a rationed accent, typography (Inter/Geist, tracking, weights, two-tone headings), elevation without shadows, restrained glow and masks, buttons, headers and landing-page anatomy with the product as the hero, plus a script that generates and contrast-checks palettes. Use when creating new designs, redesigning or improving the look of an existing project, prototyping visual directions or mockups, or setting up or changing tokens, colors, themes, type or surfaces, when asked for something like Linear or Vercel, or when a UI looks cheap, flat, muddy or generic.
 ---
 
 # Devtool visual system

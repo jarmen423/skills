@@ -1,6 +1,6 @@
 ---
 name: interface-motion
-description: How an interface moves — whether to animate at all (the frequency gate) and how to make motion feel fast and physical, from Emil Kowalski's and Rauno Freiberg's work. Covers easing curves, durations, scale and transform-origin, springs, interruptibility, stagger and choreography, drag and swipe gestures (velocity, rubber-banding, snap points), clip-path and blur tricks, performance and reduced motion, with CSS and framer-motion recipes. Use for any animation, transition, hover or press effect, enter/exit, toast, drawer, popover, tab indicator, scroll reveal or gesture, and whenever an interaction feels slow, janky, floaty or off.
+description: How an interface moves — whether to animate at all (the frequency gate) and how to make motion feel fast and physical, from Emil Kowalski's and Rauno Freiberg's work. Covers easing curves, durations, scale and transform-origin, springs, interruptibility, stagger and choreography, drag and swipe gestures (velocity, rubber-banding, snap points), clip-path and blur tricks, performance and reduced motion, with CSS and framer-motion recipes. Use when prototyping interactions or motion for new designs and redesigns, and for any animation, transition, hover or press effect, enter/exit, toast, drawer, popover, tab indicator, scroll reveal or gesture, and whenever an interaction feels slow, janky, floaty or off.
 ---
 
 # Interface motion

@@ -1,6 +1,6 @@
 ---
 name: bento-grids
-description: How to design and build bento grid sections — the asymmetric feature-card grids on Apple, Linear, Vercel and Raycast pages — so they tell one product story and stay scannable. Covers content-first hierarchy, cell count and ratio limits, cell anatomy and headline lockups, dark surfaces, CSS Grid templates with per-breakpoint areas, gap and radius math, container queries, responsive collapse and accessibility. Use whenever building or critiquing a features section, bento, card grid, USP or stats grid, even if the user just says feature cards or asks to make a section more interesting.
+description: How to design and build bento grid sections — the asymmetric feature-card grids on Apple, Linear, Vercel and Raycast pages — so they tell one product story and stay scannable. Covers content-first hierarchy, cell count and ratio limits, cell anatomy and headline lockups, dark surfaces, CSS Grid templates with per-breakpoint areas, gap and radius math, container queries, responsive collapse and accessibility. Use whenever designing, redesigning or prototyping a landing or product page that needs a features section, and whenever building or critiquing a features section, bento, card grid, USP or stats grid, even if the user just says feature cards or asks to make a section more interesting.
 ---
 
 # Bento grids
