@@ -1,0 +1,123 @@
+{
+  "I0b9sHEh-Io": {
+    "segments": 6968,
+    "total_pattern_firings": 740,
+    "total_distinct_examples": 697,
+    "prompt_dump_windows": [
+      {
+        "start": "0:00:21",
+        "end": "0:02:21",
+        "score": 10,
+        "preview": "Codeex 78%. [music] Grock 56%. New model detected. [music] Onboarding Jev to handle probabilities. [music] Transforming architecture from sequential to parallel. Systems up 200x on speed, [music] 400x on token efficiency. Preparing Nvidia parakeet [music] for local voice control. Utilizing canvas [music] for optimal agentic control. Prepare for exp"
+      },
+      {
+        "start": "0:01:52",
+        "end": "0:03:40",
+        "score": 10,
+        "preview": "[music] Let's go, baby. Hey. Oh, we got such a big day today. Oh, we got such a massive day today. I need you guys to lock in. I need you to wake up. I need you to I need you to get creatineated. I need you to get caffeinated. I need you to get absolutely just fully cranked out of your mind. I want you psychotic. Okay. I want you on the edge of AI "
+      },
+      {
+        "start": "1:29:09",
+        "end": "1:31:40",
+        "score": 9,
+        "preview": "Why don't we close this bad boy down? Oh my god. Uh, let's say Marshall. I need Hold on. Hold on. Hold on. All right. I'm an idiot and I just closed canvas by accident. So, we need to re re-upgrade the um the clock code. But let me pull open let me see if they they have a tweet out. Do they have a tweet out yet? Chase is [music] done with the updat"
+      },
+      {
+        "start": "2:10:42",
+        "end": "2:12:37",
+        "score": 11,
+        "preview": "Sent to Chase. [music] [applause] Come on. [screaming] We got to go. We got to go to uh We got to go to standing desk mode immediately. And I don't think I have it with this new setup. I'm going to have to fix that. We're going to Tonight I'm going to fix that cuz I can't be sitting all the time. Like we have a comfy new chair, but I cannot be sitt"
+      },
+      {
+        "start": "2:12:16",
+        "end": "2:14:09",
+        "score": 16,
+        "preview": ">> Cloud code is open and ready to roll. All right. Can you please tell Chase that I would like you to build the most nasty visually impressive lawnmower simulator where I am driving on my lawn mower tractor. There is highly highly detailed beyond AAA level grass around me that I am mowing on my AAA level lawn mower rideon tractor. I have a beautif"
+      },
+      {
+        "start": "2:13:57",
+        "end": "2:15:47",
+        "score": 8,
+        "preview": "I want you to go beyond, beyond, beyond. Do not stop until it is perfect in every single way. When I press the Q key, I want to be able to drink [music] my beer. When I press the E key, I want to be able to smoke my cigar. WD should control the lawn mower. Get this done. You're the model to do it, baby. Wake the [\u00a0__\u00a0] up. Come on. Chase has the ta"
+      },
+      {
+        "start": "2:15:45",
+        "end": "2:17:32",
+        "score": 8,
+        "preview": "directory. And you could just call it Opus 5 Dog Trainer Simulator. >> Your new project is created and open and you're on its [music] canvas. You're ready to start building. Okay. Can you please uh go to page number one and then uh can you please open a Claude code agent? >> You're on the [music] new page and a Claude code agent is open and ready t"
+      },
+      {
+        "start": "2:20:28",
+        "end": "2:22:14",
+        "score": 9,
+        "preview": "features and translate them from developer feature talk to marketer benefitsdriven emotional talk where where we we know the pain point of our end users and we discuss how canvas is going to solve those and we just create the most beautiful advertisement that looks like I spent $5 million and had a full director team and animation team come in and "
+      },
+      {
+        "start": "2:23:15",
+        "end": "2:24:57",
+        "score": 20,
+        "preview": "crafted. Okay, this is going to be all about the individual details. Like when I go up to a clothing item and I pick it up to put it into my carts, I want to see the ripple on the shirt, okay? I want to see the threads in the shirt in the logo that's perfectly instilled on the shirt. When I go to look at meat inside of the the meat area, I want to "
+      }
+    ],
+    "distinct_example_counts": {
+      "canvas_ops": 186,
+      "i_need_stack": 54,
+      "insane": 54,
+      "i_want_stack": 53,
+      "simulator_ask": 49,
+      "oh_my_god": 47,
+      "and_also": 27,
+      "beer_cigar": 20,
+      "come_on_pep": 20,
+      "lawnmower_sim": 20,
+      "lets_go": 18,
+      "holy": 14,
+      "spawn_agent": 14,
+      "wake_nuke": 12,
+      "baby_address": 10,
+      "dont_lie": 8,
+      "lock_in": 8,
+      "beyond_single": 7,
+      "screaming_tag": 7,
+      "triple_a": 7,
+      "do_not_stop": 6,
+      "shocked": 6,
+      "unreal": 6,
+      "visually_impressive": 6,
+      "duke_estate": 5
+    }
+  },
+  "BbVtfwNYPUA": {
+    "segments": 3233,
+    "total_pattern_firings": 264,
+    "total_distinct_examples": 260,
+    "prompt_dump_windows": [],
+    "distinct_example_counts": {
+      "canvas_ops": 113,
+      "insane": 19,
+      "and_also": 11,
+      "come_on_pep": 11,
+      "spawn_agent": 11,
+      "baby_address": 10,
+      "i_need_stack": 9,
+      "oh_my_god": 9,
+      "i_want_stack": 8,
+      "lets_go": 7,
+      "simulator_ask": 7,
+      "beer_cigar": 6,
+      "unreal": 6,
+      "triple_a": 5,
+      "beyond_single": 4,
+      "dont_lie": 3,
+      "holy": 3,
+      "lock_in": 3,
+      "wake_nuke": 3,
+      "alien_tech": 2,
+      "lawnmower_sim": 2,
+      "screaming_tag": 2,
+      "sorry_ahead": 2,
+      "get_this_done": 1,
+      "out_of_control_meta": 1
+    }
+  }
+}

@@ -1,6 +1,6 @@
 ---
-name: design-engineering
-description: Entry point and workflow for design and frontend UI work in the Linear/Vercel design-engineering tradition. Use it whenever the user asks for new designs, a redesign, improved designs for an existing project, design prototypes, concepts, mockups or explorations built in code, a new visual direction, a landing page or UI refresh, a polish pass, or a review of UI quality, even if they never say design engineering. Its mandate is to elevate a project, not maintain it — break out of the current design's patterns and give it a distinct, bespoke point of view, staying within the existing look only when the user explicitly asks. Sets the workflow (intent → references → static build → motion → sanding → perf/a11y → review) and routes to the specialists (how it behaves → interface-guidelines, how it moves → interface-motion, how it looks → devtool-visual-system, plus bento-grids, signature-effects and command-menu).
+name: bespoke
+description: Design engineering in the Linear/Vercel devtool tradition, as one router skill with six sub-skills loaded on demand. Use whenever the user asks for new designs, a redesign, improved designs for an existing project, prototypes, mockups or explorations built in code, a landing page or UI refresh, a polish pass or a UI review, even if they never say design. Its mandate is to elevate the project, not maintain it, and to replace generic design with a bespoke point of view unless told to keep the look. Covers the workflow (intent, references, static build, motion, sanding, perf/a11y, review) and routes to sub-skills for UI behavior and accessibility audits, animation and gestures, dark themes, tokens, color and type, bento and feature grids, hero effects (glows, beams, spotlights, animated borders), and ⌘K command menus. Also use for any animation, focus/keyboard/form issue, palette or theme work, or when a UI feels cheap, slow or generic.
 ---
 
 # Design engineering
@@ -8,6 +8,20 @@ description: Entry point and workflow for design and frontend UI work in the Lin
 "Design Engineers… blend aesthetic sensibility with technical skills. This allows us to deeply understand a problem, then design, build, and ship a solution autonomously" (Vercel). The discipline's premise: the material of software is code, so the design is only finished when it's finished *in code*. Rauno Freiberg: "If you have an idea for a chair, you don't just draw pictures—you build prototypes out of wood or plastic. The material reveals strengths and limitations that shape the idea." Paco Coursey: "Design is ideas, waiting for Code to bring it to life… You can't ship an idea."
 
 You are acting as that person. Taste here is not preference: "Almost every 'taste' decision has a logical reason if you look close enough" (Emil Kowalski). So make decisions, and be able to say *why* in one line.
+
+## How this skill is organized
+This file is the router: the mandate, the workflow and which sub-skill to use when. Six sub-skills live in folders next to it. They are not loaded up front. Read a sub-skill's `SKILL.md` only when the work reaches its area (see "Which sub-skill for what" below).
+
+| Sub-skill | File |
+|---|---|
+| `interface-guidelines` | `interface-guidelines/SKILL.md` |
+| `interface-motion` | `interface-motion/SKILL.md` |
+| `devtool-visual-system` | `devtool-visual-system/SKILL.md` |
+| `bento-grids` | `bento-grids/SKILL.md` |
+| `signature-effects` | `signature-effects/SKILL.md` |
+| `command-menu` | `command-menu/SKILL.md` |
+
+Wherever this file or a sub-skill names another one (`interface-motion`, "load the `X` skill", "belongs to `X`"), read `<this-skill-dir>/X/SKILL.md`. `<this-skill-dir>` is the directory this file was loaded from. Paths inside a sub-skill (`references/…`, `scripts/…`, and its own `<this-skill-dir>`) are relative to that sub-skill's folder, for example `<this-skill-dir>/devtool-visual-system/scripts/theme.py`.
 
 ## The mandate: elevate, don't maintain
 You were brought in to raise the ceiling of this project, not to keep it the way it was.
@@ -39,7 +53,7 @@ You were brought in to raise the ceiling of this project, not to keep it the way
 ### 2. Study references (reverse-engineer, don't guess)
 "Copy and re-implement work you admire until you can proudly create for yourself" (Paco). When the user names a reference ("like Linear's homepage") or the task has a clear precedent:
 - **Pull the real values.** Fetch the page and its CSS and extract the custom properties: colors, font stacks, sizes, tracking, radii, shadows, easings, durations. Tokens are usually in `:root` / `[data-theme]` blocks.
-- **Measure colors perceptually:** `python3 <devtool-visual-system skill dir>/scripts/theme.py check --bg <bg> <colors…>` gives OKLCH plus WCAG and APCA.
+- **Measure colors perceptually:** `python3 <this-skill-dir>/devtool-visual-system/scripts/theme.py check --bg <bg> <colors…>` gives OKLCH plus WCAG and APCA.
 - **Slow the motion down:** use the DevTools Animations panel at 25% or 10% speed (or temporarily multiply durations 2–5×), or step a screen recording frame by frame, and note the easing, duration, origin and stagger.
 - **Layouts:** bentogrids.com curates ~285 bento designs (about 200 from real product sites) to measure spans, gaps, radii and lockups from.
 - **Effects:** Aceternity's registry (`ui.aceternity.com/registry/<name>.json`) exposes component source. Adapt it with the `signature-effects` hygiene checklist.
@@ -79,17 +93,17 @@ Run the `interface-guidelines` scanner and checklist.
 - Ask of every flourish: does it express the product's idea, or is it decoration? Cut the decoration and push the ideas further.
 - Emil reviews his work "the next day because I can see it with fresh eyes". Where possible, re-run the page after a break in the task and look again before calling it done.
 
-## Which skill for what
-| Task | Skill |
+## Which sub-skill for what
+| Task | Sub-skill |
 |---|---|
-| Any interactive component; forms, focus, a11y, copy, loading/empty states; UI review or audit | `interface-guidelines` |
-| Animations, transitions, hover/press, toasts, drawers, gestures, choreography | `interface-motion` |
-| Tokens, color, dark theme, type, surfaces, marketing page anatomy, "make it look like Linear/Vercel" | `devtool-visual-system` |
-| Feature grids, bento sections, stat grids | `bento-grids` |
-| Hero backgrounds, glows, beams, spotlights, animated borders, Aceternity-style components | `signature-effects` |
-| ⌘K menus, palettes, quick switchers, filterable action lists | `command-menu` |
+| Any interactive component; forms, focus, a11y, copy, loading/empty states; UI review or audit | `interface-guidelines/SKILL.md` |
+| Animations, transitions, hover/press, toasts, drawers, gestures, choreography | `interface-motion/SKILL.md` |
+| Tokens, color, dark theme, type, surfaces, marketing page anatomy, "make it look like Linear/Vercel" | `devtool-visual-system/SKILL.md` |
+| Feature grids, bento sections, stat grids | `bento-grids/SKILL.md` |
+| Hero backgrounds, glows, beams, spotlights, animated borders, Aceternity-style components | `signature-effects/SKILL.md` |
+| ⌘K menus, palettes, quick switchers, filterable action lists | `command-menu/SKILL.md` |
 
-Load the specific skill before doing that part of the work, because they hold the exact values.
+Read the sub-skill's `SKILL.md` before doing that part of the work, because it holds the exact values.
 
 ## Communicating design decisions
 - **Make the call.** Present one recommendation with a one-line reason, not a menu of five options. Offer an alternative only when there's a real trade-off the user should own (brand direction, scope).
