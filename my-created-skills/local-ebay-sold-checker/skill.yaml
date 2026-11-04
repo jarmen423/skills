@@ -1,0 +1,8 @@
+name: local_ebay_sold_checker
+title: eBay Sold Listings Checker
+description: Establish real market value from recent eBay SOLD listings before a used purchase or flip decision, with deterministic median and flip-fee math. Fulfills deal-finder-agent spec skill #2.
+category: Shopping and deals
+include_in_prompt: true
+availability:
+  confidential_vm: true
+  needs_speech: false
